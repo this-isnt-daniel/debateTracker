@@ -12,9 +12,11 @@ public class DebateTrackerApplication {
 		for (int i = 0; i < 10; i++) {
 			System.out.println("\n");
 		}
+
 		System.out.println("Debate Tracker Application Started");
 		ParseTabbycatXML parser = new ParseTabbycatXML("src/main/resources/static/Wickys_2024.xml");
 		parser.parseXML();
+		parser.getTeamsAndSpeakers(parser.document);
 	}
 
 }
