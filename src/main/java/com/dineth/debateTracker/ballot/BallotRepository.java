@@ -10,7 +10,9 @@ import java.util.List;
 @Repository
 public interface BallotRepository extends JpaRepository<Ballot, Long> {
     List<Ballot> findBallotsByDebater(Debater debater);
+
     List<Ballot> findBallotsByDebaterAndSpeakerScoreGreaterThan(Debater debater, Float speakerScore);
+
     @Query(value = "SELECT d.first_name, d.last_name, d.phone, array_agg(b.speaker_score) AS scores, t.short_name, r.round_no, tm.team_name " +
             "FROM ballot b " +
             "JOIN debater d ON b.debater_id = d.id " +
@@ -24,6 +26,26 @@ public interface BallotRepository extends JpaRepository<Ballot, Long> {
             "ORDER BY d.first_name, d.last_name",
             nativeQuery = true)
     List<Object[]> findDebaterScoresNative();
+
+    @Query(value = "SELECT d.first_name, d.last_name, array_agg(b.speaker_score) AS scores, AVG(b.speaker_score) AS avg_score, COUNT(b.speaker_score) AS rounds_debated " +
+            "FROM ballot b " +
+            "JOIN debater d ON b.debater_id = d.id " +
+            "WHERE b.speaker_score > 40.5 " +
+            "GROUP BY d.first_name, d.last_name " +
+            "ORDER BY avg_score DESC",
+            nativeQuery = true)
+    List<Object[]> getRankedDebaters();
+
+
+    @Query(value = "SELECT d.first_name, d.last_name, array_agg(b.speaker_score) AS scores, AVG(b.speaker_score) AS avg_score, COUNT(b.speaker_score) AS rounds_debated " +
+            "FROM ballot b " +
+            "JOIN debater d ON b.debater_id = d.id " +
+            "WHERE b.speaker_score > 40.5 AND d.first_name = ?1 AND d.last_name = ?2 " +
+            "GROUP BY d.first_name, d.last_name " +
+            "ORDER BY avg_score DESC",
+            nativeQuery = true)
+    List<Object[]> getRankedDebaters(String firstName, String lastName);
+
 
 
 }
