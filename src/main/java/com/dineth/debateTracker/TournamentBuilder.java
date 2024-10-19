@@ -36,6 +36,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -79,30 +84,29 @@ public class TournamentBuilder {
     @GetMapping("/build")
     @Transactional
     public Object buildTournament(@RequestParam String fileName) {
-        return buildMyTournament("src/main/resources/static/speaksXML/" + fileName);
+        return buildMyTournament("src/main/resources/static/speaksXML/2024/" + fileName);
     }
 
     @GetMapping("/buildall")
     @Transactional
     public Object buildAllTournaments() {
-        ArrayList<String> fileNames = new ArrayList<>();
-        fileNames.add("APIIT24.xml");
-        fileNames.add("DS24.xml");
-        fileNames.add("NMPs2024.xml");
-        fileNames.add("SLSDC23.xml");
-        fileNames.add("Wickys24.xml");
-        fileNames.add("BC24.xml");
-        fileNames.add("Henley24.xml");
-        fileNames.add("RI2024.xml");
-        fileNames.add("Vijis2024.xml");
-        fileNames.add("Nixons24.xml");
+        List<String> fileNames = new ArrayList<>();
+        try {
+            Path folderPath = Paths.get("src/main/resources/static/speaksXML/2024/");
+            try (DirectoryStream<Path> stream = Files.newDirectoryStream(folderPath, "*.xml")) {
+                for (Path entry : stream) {
+                    fileNames.add(entry.getFileName().toString());
+                }
+            }
+        } catch (IOException e) {
+            log.error("Error in reading files : " + e.getMessage());
+            return "Error";
+        }
 
         for (String fileName : fileNames) {
-            buildMyTournament("src/main/resources/static/speaksXML/" + fileName);
+            buildMyTournament("src/main/resources/static/speaksXML/2024/" + fileName);
         }
         return "Done";
-
-
     }
 
     @GetMapping("/parsecsv")

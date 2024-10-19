@@ -1,10 +1,11 @@
 package com.dineth.debateTracker.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 
 import java.util.Arrays;
 import java.util.HashSet;
-
+@Slf4j
 public class StringUtil {
     /**
      * Splits a name into first name and last name
@@ -23,7 +24,8 @@ public class StringUtil {
         //remove all empty strings
         parts = Arrays.stream(parts).filter(s -> !s.isEmpty()).toArray(String[]::new);
         if (parts.length == 1) {
-            throw new CustomExceptions.NameSplitException("Debater name must at least have a first name and a last name");
+            log.warn("People names must at least have a first name and a last name");
+            return new ImmutablePair<>(capitalizeName(parts[0]), "");
         }
 
         //check for prefixes in the entire name

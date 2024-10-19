@@ -144,6 +144,7 @@ public class ParseTabbycatXML {
                     Boolean independent = Boolean.valueOf(attributes.getNamedItem("independent").getNodeValue());
                     JudgeDTO temp = new JudgeDTO(adjId, adjName, adjScore, core, independent);
                     judgeDTOs.add(temp);
+                    temp.setFeedback(getFeedbackDTOs(adjudicator));
                 }
             }
             return judgeDTOs;
@@ -151,6 +152,60 @@ public class ParseTabbycatXML {
             log.error("Error parsing judge DTO: " + e.getMessage());
             throw e;
         }
+    }
+
+    public List<FeedbackDTO> getFeedbackDTOs(Node judge) {
+        NodeList feedbackList = judge.getChildNodes();
+        List<FeedbackDTO> feedbackDTOs = new ArrayList<>();
+        for (int k = 0; k < feedbackList.getLength(); k++) {
+            FeedbackDTO feedbackDTO = new FeedbackDTO();
+            Node feedback = feedbackList.item(k);
+            try {
+                if (feedback.getNodeType() == Node.ELEMENT_NODE) {
+                    NamedNodeMap feedbackAttributes = feedback.getAttributes();
+                    String debateId = feedbackAttributes.getNamedItem("debate").getNodeValue();
+                    Float overallRating = Float.valueOf(feedbackAttributes.getNamedItem("score").getNodeValue());
+                    Node sourceTeamId = feedbackAttributes.getNamedItem("source-team");
+                    Node sourceJudgeId = feedbackAttributes.getNamedItem("source-adjudicator");
+                    feedbackDTO.setTargetJudgeId(judge.getAttributes().getNamedItem("id").getNodeValue());
+                    if (sourceTeamId != null) feedbackDTO.setSourceTeamId(sourceTeamId.getNodeValue());
+                    else feedbackDTO.setSourceJudgeId(sourceJudgeId.getNodeValue());
+                    feedbackDTO.setDebateId(debateId);
+                    feedbackDTO.setOverallRating(overallRating);
+                    //get feedback question values
+                    for (int l = 0; l < feedback.getChildNodes().getLength(); l++) {
+                        Node feedbackValues = feedback.getChildNodes().item(l);
+                        if (feedbackValues.getNodeType() == Node.ELEMENT_NODE) {
+                            NamedNodeMap feedbackValuesAttributes = feedbackValues.getAttributes();
+                            String question = feedbackValuesAttributes.getNamedItem("question").getNodeValue();
+
+                            switch (question) {
+                                case "Q37":
+                                    feedbackDTO.setClashEvaluation(Float.valueOf(feedbackValues.getTextContent()));
+                                    break;
+                                case "Q36":
+                                    feedbackDTO.setClashOrganization(Float.valueOf(feedbackValues.getTextContent()));
+                                    break;
+                                case "Q34":
+                                    feedbackDTO.setTrackingArguments(Float.valueOf(feedbackValues.getTextContent()));
+                                    break;
+                                case "Q2":
+                                    feedbackDTO.setComments(feedbackValues.getTextContent());
+                                    break;
+                                case "Q1":
+                                    feedbackDTO.setAgree(feedbackValues.getTextContent());
+                                    break;
+                            }
+                        }
+                    }
+                    feedbackDTOs.add(feedbackDTO);
+                }
+            } catch (Exception e) {
+                log.error("Error parsing feedback DTO: " + e.getMessage());
+            }
+        }
+        return feedbackDTOs;
+
     }
 
     public List<InstitutionDTO> getInstitutionDTOs(Document document) {
