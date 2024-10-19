@@ -3350,7 +3350,7 @@
         </team>
         <team name="Bishop's College" code="Spikehog" id="T3" break-eligibilities="BC1">
             <speaker id="S192" institutions="I10" categories="">Shemali Abeygunawardene</speaker>
-            <speaker id="S193" institutions="I10" categories="">Safiya Bakeer Makar</speaker>
+            <speaker id="S193" institutions="I10" categories="">Safiya Bakeer Markar</speaker>
             <speaker id="S194" institutions="I10" categories="">Theruni Abeysinghe</speaker>
             <speaker id="S20" institutions="I10" categories="">Chrishelle Perera</speaker>
         </team>
@@ -3400,7 +3400,7 @@
         </team>
         <team name="Gateway College Dehiwala" code="Bone" id="T10" break-eligibilities="BC1">
             <speaker id="S44" institutions="I15" categories="">Dylan Pangoda</speaker>
-            <speaker id="S45" institutions="I15" categories="">A.P Ranithu Rishon</speaker>
+            <speaker id="S45" institutions="I15" categories="">Ranithu Rishon</speaker>
             <speaker id="S46" institutions="I15" categories="">Shahzadi Sujahudeen</speaker>
             <speaker id="S47" institutions="I15" categories="">Anna Pathirage</speaker>
         </team>
@@ -3490,9 +3490,9 @@
             <speaker id="S94" institutions="I25" categories="">Deepesh Jayadeva</speaker>
         </team>
         <team name="St. Anthony's College Kandy" code="Speaker" id="T25" break-eligibilities="BC1">
-            <speaker id="S98" institutions="I24" categories="">R M Riham</speaker>
+            <speaker id="S98" institutions="I24" categories="">Riham Riyal</speaker>
             <speaker id="S95" institutions="I24" categories="">Zeid Fahim</speaker>
-            <speaker id="S96" institutions="I24" categories="">R F M Makarim</speaker>
+            <speaker id="S96" institutions="I24" categories="">Makarim Roshan</speaker>
             <speaker id="S97" institutions="I24" categories="">Imadh Nazmi</speaker>
         </team>
         <team name="St. Bridget's Convent A" code="Stethoscope" id="T26" break-eligibilities="BC1">

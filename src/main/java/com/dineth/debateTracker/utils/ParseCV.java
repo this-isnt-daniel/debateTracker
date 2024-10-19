@@ -38,14 +38,14 @@ public class ParseCV {
                     log.error(e.getMessage());
                 }
                 try {
-                    String firstName = StringUtil.capitalizeName(line[1]);
+                    String firstName = StringUtil.capitalizeName(line[1]).trim();
                     debater.setFirstName(firstName);
                     log.debug(", First Name: " + firstName);
                 } catch (Exception e) {
                     log.error(e.getMessage());
                 }
                 try {
-                    String lastName = StringUtil.capitalizeName(line[2]);
+                    String lastName = StringUtil.capitalizeName(line[2]).trim();
                     debater.setLastName(lastName);
                     log.debug(", Last Name: " + lastName);
                 } catch (Exception e) {
@@ -60,7 +60,7 @@ public class ParseCV {
                     log.error(e.getMessage());
                 }
                 try {
-                    debater.setEmail(line[5]);
+                    debater.setEmail(line[5].trim());
                     log.debug(", Email: " + line[5]);
                 } catch (Exception e) {
                     log.error(e.getMessage());

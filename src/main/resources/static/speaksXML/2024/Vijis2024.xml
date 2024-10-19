@@ -2424,7 +2424,7 @@
             <speaker id="S9" institutions="I5" categories="">Deenah Sangani</speaker>
             <speaker id="S10" institutions="I5" categories="">Chrishelle Perera</speaker>
             <speaker id="S11" institutions="I5" categories="">Shemali Abeygunawardene</speaker>
-            <speaker id="S12" institutions="I5" categories="">Safiya Bakeer Makar</speaker>
+            <speaker id="S12" institutions="I5" categories="">Safiya Bakeer Markar</speaker>
         </team>
         <team name="British School in Colombo A" code="Sobbing" id="T4" break-eligibilities="BC1">
             <speaker id="S13" institutions="I22" categories="">Yenali De Silva</speaker>
@@ -2463,7 +2463,7 @@
         </team>
         <team name="Gateway College Dehiwala A" code="Hatching" id="T9" break-eligibilities="BC1">
             <speaker id="S32" institutions="I11" categories="">Dylan Pangoda</speaker>
-            <speaker id="S33" institutions="I11" categories="">A.P Ranithu Rishon</speaker>
+            <speaker id="S33" institutions="I11" categories="">Ranithu Rishon</speaker>
             <speaker id="S34" institutions="I11" categories="">Anna Pathirage</speaker>
             <speaker id="S35" institutions="I11" categories="">Yasir Nasran</speaker>
         </team>
@@ -2527,7 +2527,7 @@
             <speaker id="S63" institutions="I6" categories="">Dinethmi Gunewardena</speaker>
         </team>
         <team name="Muslim Ladies College A" code="Octopus" id="T18" break-eligibilities="BC1">
-            <speaker id="S65" institutions="I24" categories="">Fathima Huma Rinas</speaker>
+            <speaker id="S65" institutions="I24" categories="">Huma Rinas</speaker>
             <speaker id="S66" institutions="I24" categories="">Fathima Sheema Ramis</speaker>
             <speaker id="S67" institutions="I24" categories="">Amra Mohamed Foumi</speaker>
             <speaker id="S68" institutions="I24" categories="">Safiyya Fayaz</speaker>
@@ -2918,7 +2918,7 @@
                 <answer question="Q2">His decision was justified.</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A153" name="Vakeesh Rupan" core="false" independent="false" score="3.0">
+        <adjudicator id="A153" name="Vakeesh Rupan Shanthiruban" core="false" independent="false" score="3.0">
             <feedback score="5.0" source-team="T13" debate="D38">
                 <answer question="Q1">True</answer>
             </feedback>

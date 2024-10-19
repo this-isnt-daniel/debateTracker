@@ -5801,7 +5801,7 @@
         <team name="Bishop&#8217;s College A" code="Deciduous Tree" id="T34" break-eligibilities="BC1">
             <speaker id="S179" institutions="I27" categories="">Deenah Sangani</speaker>
             <speaker id="S180" institutions="I27" categories="">Chrishelle Perera</speaker>
-            <speaker id="S181" institutions="I27" categories="">Safiya Bakeer Makar</speaker>
+            <speaker id="S181" institutions="I27" categories="">Safiya Bakeer Markar</speaker>
             <speaker id="S182" institutions="I27" categories="">Sara Hussain</speaker>
         </team>
         <team name="Bishop&#8217;s College B" code="Stunned" id="T35" break-eligibilities="BC1">
@@ -5883,7 +5883,7 @@
         <team name="Gateway College Dehiwala A" code="Bath" id="T6" break-eligibilities="BC1">
             <speaker id="S21" institutions="I12" categories="">Dylan Pangoda</speaker>
             <speaker id="S22" institutions="I12" categories="">Shahzadi Sujahudeen</speaker>
-            <speaker id="S23" institutions="I12" categories="">A.P Ranithu Rishon</speaker>
+            <speaker id="S23" institutions="I12" categories="">Ranithu Rishon</speaker>
             <speaker id="S24" institutions="I12" categories="">Rumika Perera</speaker>
         </team>
         <team name="Gateway College Dehiwala B" code="Diagonal Mouth" id="T7" break-eligibilities="BC1">
@@ -5900,7 +5900,7 @@
         <team name="Gateway College Kandy B" code="Hazard Sign" id="T25" break-eligibilities="BC1">
             <speaker id="S93" institutions="I18" categories="">R.W.M.Vojini.S.Rajapaksha</speaker>
             <speaker id="S94" institutions="I18" categories="">Jessica Marian Leena Devadason</speaker>
-            <speaker id="S95" institutions="I18" categories="">Maathesh Kirubakaran</speaker>
+            <speaker id="S95" institutions="I18" categories="">Maatheshkaran Kirubakaran</speaker>
             <speaker id="S96" institutions="I18" categories="">Sajni Yogeshwaran</speaker>
         </team>
         <team name="Hejaaz International School A" code="Penguin" id="T8" break-eligibilities="BC1">
@@ -5961,7 +5961,7 @@
             <speaker id="S48" institutions="I3" categories="">Balamurali Akhileshan</speaker>
             <speaker id="S49" institutions="I3" categories="">Regeinious Thanujan</speaker>
             <speaker id="S50" institutions="I3" categories="">Kumaran Sajeev</speaker>
-            <speaker id="S51" institutions="I3" categories="">Yogenthiram Ezhilan</speaker>
+            <speaker id="S51" institutions="I3" categories="">Ezhilan Yogenthiram</speaker>
         </team>
         <team name="Ladies College A" code="Palette" id="T14" break-eligibilities="BC1">
             <speaker id="S52" institutions="I7" categories="">Nimansa Jayasundera</speaker>
@@ -6082,7 +6082,7 @@
         </team>
         <team name="S. Thomas' Preparatory School" code="Hundred Points" id="T42" break-eligibilities="BC1">
             <speaker id="S211" institutions="I28" categories="">K.H.A.Fernando Hershal</speaker>
-            <speaker id="S212" institutions="I28" categories="">Weerasekara Mudalige Hansaja Arusha Weerasekara
+            <speaker id="S212" institutions="I28" categories="">Hansaja Weerasekara
             </speaker>
             <speaker id="S213" institutions="I28" categories="">Yashen Deshapriya</speaker>
             <speaker id="S214" institutions="I28" categories="">Jonathan Josaiah Alailima</speaker>
