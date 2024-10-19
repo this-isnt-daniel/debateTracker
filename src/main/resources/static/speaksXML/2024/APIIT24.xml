@@ -3527,7 +3527,7 @@
         <team name="Gateway College Colombo 1" code="Boom Box" id="T12" break-eligibilities="BC1">
             <speaker id="S48" institutions="I27" categories="">Shannel Pinidiya</speaker>
             <speaker id="S45" institutions="I27" categories="">Aiden Thomas</speaker>
-            <speaker id="S46" institutions="I27" categories="">Dhanuka Wijegoonaratne</speaker>
+            <speaker id="S46" institutions="I27" categories="">Dhanuka Wijegunaratne</speaker>
             <speaker id="S47" institutions="I27" categories="">Gabrielle Gnanaolivu</speaker>
         </team>
         <team name="Highlands College Maharagama 1" code="Thumbs Up" id="T13" break-eligibilities="BC1">
@@ -3543,8 +3543,8 @@
             <speaker id="S56" institutions="I8" categories="">Yumna Fahry</speaker>
         </team>
         <team name="Holy Family Convent Bambalapitiya 1" code="Hashtag Goals" id="T15" break-eligibilities="BC1">
-            <speaker id="S57" institutions="I38" categories="">Kimaya Weerarathne</speaker>
-            <speaker id="S58" institutions="I38" categories="">Aanjali Gunarantne</speaker>
+            <speaker id="S57" institutions="I38" categories="">Kimaya Weeraratne</speaker>
+            <speaker id="S58" institutions="I38" categories="">Aanjali Gunaratne</speaker>
             <speaker id="S59" institutions="I38" categories="">Nimansa Fernando</speaker>
             <speaker id="S60" institutions="I38" categories="">Daania Kamil</speaker>
         </team>
@@ -3557,7 +3557,7 @@
         <team name="Ladies College 1" code="Duck" id="T18" break-eligibilities="BC1">
             <speaker id="S69" institutions="I18" categories="">Nishka Vivekanandan</speaker>
             <speaker id="S70" institutions="I18" categories="">Nimansa Jayasundera</speaker>
-            <speaker id="S71" institutions="I18" categories="">Senaya Dissanayake</speaker>
+            <speaker id="S71" institutions="I18" categories="">Senaya Dissanayeka</speaker>
             <speaker id="S72" institutions="I18" categories="">Movinya Katulanda</speaker>
         </team>
         <team name="Loyola College Negombo 1" code="Banana" id="T19" break-eligibilities="BC1">
@@ -3567,9 +3567,9 @@
             <speaker id="S74" institutions="I36" categories="">Shakya Perera</speaker>
         </team>
         <team name="Lyceum Gampaha 1" code="Boat" id="T45" break-eligibilities="BC1">
-            <speaker id="S217" institutions="I46" categories="">Chandeena</speaker>
+            <speaker id="S217" institutions="I46" categories="">Chandeena Wijenayake</speaker>
             <speaker id="S218" institutions="I46" categories="">Nevan</speaker>
-            <speaker id="S219" institutions="I46" categories="">Sayumi</speaker>
+            <speaker id="S219" institutions="I46" categories="">Sayumi Wijesooriya</speaker>
             <speaker id="S220" institutions="I46" categories="">Ayansa</speaker>
         </team>
         <team name="Lyceum International School Wattala 1" code="Shopping" id="T20" break-eligibilities="BC1">
@@ -3589,16 +3589,16 @@
             <speaker id="S85" institutions="I37" categories="">Deshna Marasinghe</speaker>
             <speaker id="S87" institutions="I37" categories="">Rasheedah Jiffrey</speaker>
             <speaker id="S88" institutions="I37" categories="">Laila Hazari</speaker>
-            <speaker id="S232" institutions="I37" categories="">Sakthiga</speaker>
+            <speaker id="S232" institutions="I37" categories="">Sakthiga Gnanakanthan</speaker>
         </team>
         <team name="Musaeus College 1" code="Tongue Out" id="T23" break-eligibilities="BC1">
             <speaker id="S89" institutions="I44" categories="">Sanushi Premaratne</speaker>
             <speaker id="S90" institutions="I44" categories="">Minanga Amarasinghe</speaker>
-            <speaker id="S91" institutions="I44" categories="">Dinethmi Gunawardena</speaker>
+            <speaker id="S91" institutions="I44" categories="">Dinethmi Gunewardena</speaker>
             <speaker id="S92" institutions="I44" categories="">Dunili Amarasinghe</speaker>
         </team>
         <team name="Muslim Ladies' College 1" code="Blown Leaves" id="T24" break-eligibilities="BC1">
-            <speaker id="S94" institutions="I14" categories="">Amra Faumi</speaker>
+            <speaker id="S94" institutions="I14" categories="">Amra Foumi</speaker>
             <speaker id="S230" institutions="I14" categories="">Sheema</speaker>
             <speaker id="S231" institutions="I14" categories="">Huma</speaker>
             <speaker id="S93" institutions="I14" categories="">Sadika Shaheima</speaker>
@@ -3612,7 +3612,7 @@
             <speaker id="S99" institutions="I40" categories="">Gayuru Menath</speaker>
         </team>
         <team name="Royal College 1" code="Mailbox" id="T26" break-eligibilities="BC1">
-            <speaker id="S102" institutions="I2" categories="">Tharaniharan Thananchayan</speaker>
+            <speaker id="S102" institutions="I2" categories="">T. Tharaniharan</speaker>
             <speaker id="S101" institutions="I2" categories="">Methira Padeniya</speaker>
             <speaker id="S103" institutions="I2" categories="">Raashid Cassim</speaker>
             <speaker id="S104" institutions="I2" categories="">Kaveesha de Silva</speaker>
@@ -3685,7 +3685,7 @@
             <speaker id="S150" institutions="I42" categories="">Yenuki Maleesa</speaker>
             <speaker id="S149" institutions="I42" categories="">Aaminah Niyas</speaker>
             <speaker id="S147" institutions="I42" categories="">Nethuki Karunaratne</speaker>
-            <speaker id="S148" institutions="I42" categories="">Tharinsa Goonarathna</speaker>
+            <speaker id="S148" institutions="I42" categories="">Tharinsa Goonaratna</speaker>
         </team>
         <team name="Swing 1" code="Big Roar" id="T46" break-eligibilities="BC1">
             <speaker id="S226" institutions="I47" categories="">Zaid Sarfaz</speaker>
@@ -3700,13 +3700,13 @@
             <speaker id="S152" institutions="I21" categories="">Yenali De Silva</speaker>
             <speaker id="S153" institutions="I21" categories="">Arun Sumathiratne</speaker>
             <speaker id="S154" institutions="I21" categories="">Jehan Fernando</speaker>
-            <speaker id="S233" institutions="I21" categories="">Layla</speaker>
+            <speaker id="S233" institutions="I21" categories="">Layla Jeffels</speaker>
         </team>
         <team name="Trinity College Kandy 1" code="Thinking" id="T40" break-eligibilities="BC1">
             <speaker id="S155" institutions="I19" categories="">Thesath Keppetiyagama</speaker>
             <speaker id="S156" institutions="I19" categories="">Sharukh Fairooz</speaker>
             <speaker id="S157" institutions="I19" categories="">Nethula Hettihewaage</speaker>
-            <speaker id="S158" institutions="I19" categories="">Sanchita Wickrama</speaker>
+            <speaker id="S158" institutions="I19" categories="">Sanchitha Wickrama</speaker>
         </team>
         <team name="Visakha Vidyalaya 1" code="Microphone" id="T41" break-eligibilities="BC1">
             <speaker id="S162" institutions="I26" categories="">Santhushi Serasinghe</speaker>
@@ -3718,7 +3718,7 @@
             <speaker id="S166" institutions="I5" categories="">Shaheem Vazeer</speaker>
             <speaker id="S165" institutions="I5" categories="">Goyum Kaluthanthrige</speaker>
             <speaker id="S164" institutions="I5" categories="">Saajid Oowise</speaker>
-            <speaker id="S163" institutions="I5" categories="">Eesa Shiroz</speaker>
+            <speaker id="S163" institutions="I5" categories="">Easa Shiroz</speaker>
         </team>
         <team name="Wycherley International School Colombo 1" code="Gem" id="T43" break-eligibilities="BC1">
             <speaker id="S167" institutions="I10" categories="">Thakshana Weerawardena.</speaker>

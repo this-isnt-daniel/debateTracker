@@ -2506,10 +2506,10 @@
             <speaker id="S50" institutions="I1" categories="">Senaya Dissanayeka</speaker>
             <speaker id="S51" institutions="I1" categories="">Nimansa Jayasundera</speaker>
             <speaker id="S52" institutions="I1" categories="">Movinya Katulanda</speaker>
-            <speaker id="S53" institutions="I1" categories="">Nehara Nanayakkar</speaker>
+            <speaker id="S53" institutions="I1" categories="">Nehara Nanayakkara</speaker>
         </team>
         <team name="Ladies College B" code="Basketball" id="T15" break-eligibilities="BC1">
-            <speaker id="S54" institutions="I1" categories="">Khanavee Sathuranan</speaker>
+            <speaker id="S54" institutions="I1" categories="">Khanavee Suthaharan</speaker>
             <speaker id="S55" institutions="I1" categories="">Vithushana Rajaratnam</speaker>
             <speaker id="S56" institutions="I1" categories="">Shaza Shafraz</speaker>
             <speaker id="S57" institutions="I1" categories="">Nitika Vivekanandan</speaker>
@@ -2523,7 +2523,7 @@
         <team name="Musaeus College A" code="Rainbow" id="T17" break-eligibilities="BC1">
             <speaker id="S195" institutions="I6" categories="">Minanga Amarasinghe</speaker>
             <speaker id="S64" institutions="I6" categories="">Siddha Rajapaksha</speaker>
-            <speaker id="S62" institutions="I6" categories="">Mihindi Patinayake</speaker>
+            <speaker id="S62" institutions="I6" categories="">Mihindi Pathinayake</speaker>
             <speaker id="S63" institutions="I6" categories="">Dinethmi Gunewardena</speaker>
         </team>
         <team name="Muslim Ladies College A" code="Octopus" id="T18" break-eligibilities="BC1">
@@ -2551,15 +2551,15 @@
             <speaker id="S84" institutions="I14" categories="">Hirush Kurukularachchi</speaker>
         </team>
         <team name="Sujatha Vidyalaya Nugegoda A" code="Boar" id="T23" break-eligibilities="BC1">
-            <speaker id="S85" institutions="I20" categories="">Nethuki Karunarathna</speaker>
+            <speaker id="S85" institutions="I20" categories="">Nethuki Karunaratne</speaker>
             <speaker id="S86" institutions="I20" categories="">Tharinsa Goonaratna</speaker>
             <speaker id="S88" institutions="I20" categories="">Yuhani Jayawardhana</speaker>
             <speaker id="S87" institutions="I20" categories="">Yenuki Maleesa</speaker>
         </team>
         <team name="Trinity College Kandy A" code="Spider Web" id="T24" break-eligibilities="BC1">
             <speaker id="S89" institutions="I2" categories="">Nethula Hettihewage</speaker>
-            <speaker id="S90" institutions="I2" categories="">&#8288;Nimuthu Pathiraja</speaker>
-            <speaker id="S91" institutions="I2" categories="">&#8288;Chaniru Senhas</speaker>
+            <speaker id="S90" institutions="I2" categories="">Nimuthu Pathiraja</speaker>
+            <speaker id="S91" institutions="I2" categories="">Chaniru Senhas</speaker>
             <speaker id="S92" institutions="I2" categories="">Kavindu Athukorala</speaker>
         </team>
         <team name="Trinity College Kandy B" code="Black Flag" id="T25" break-eligibilities="BC1">
@@ -2569,10 +2569,10 @@
             <speaker id="S96" institutions="I2" categories="">Nepul Ranathunga</speaker>
         </team>
         <team name="Wesley College A" code="Folding Hand Fan" id="T26" break-eligibilities="BC1">
-            <speaker id="S97" institutions="I18" categories="">Afzal Fayaz</speaker>
-            <speaker id="S98" institutions="I18" categories="">Easa Sheroz</speaker>
-            <speaker id="S99" institutions="I18" categories="">Goyum</speaker>
-            <speaker id="S100" institutions="I18" categories="">Shaheem Vazer</speaker>
+            <speaker id="S97" institutions="I18" categories="">Afdhel Fayaz</speaker>
+            <speaker id="S98" institutions="I18" categories="">Easa Shiroz</speaker>
+            <speaker id="S99" institutions="I18" categories="">Goyum Kaluthanthrige</speaker>
+            <speaker id="S100" institutions="I18" categories="">Shaheem Vazeer</speaker>
         </team>
         <team name="Swing" code="Pushpin" id="T34" break-eligibilities="BC1">
             <speaker id="S197" categories="">Speaker 1</speaker>

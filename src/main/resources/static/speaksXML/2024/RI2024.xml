@@ -1677,33 +1677,33 @@
             <speaker id="S4" institutions="I1" categories="">Gagana Fernando</speaker>
         </team>
         <team name="Ananda College B" code="Cow Juice" id="T2" break-eligibilities="BC1">
-            <speaker id="S5" institutions="I1" categories="">Ruhath&#160;Rajakaruna</speaker>
+            <speaker id="S5" institutions="I1" categories="">Ruhath Rajakaruna</speaker>
             <speaker id="S6" institutions="I1" categories="">Sethula Gunasekara</speaker>
             <speaker id="S7" institutions="I1" categories="">Vihas Rupasinghe</speaker>
             <speaker id="S8" institutions="I1" categories="">Kavith</speaker>
         </team>
         <team name="Anula Vidyalaya Nugegoda A" code="Violin" id="T3" break-eligibilities="BC1">
-            <speaker id="S9" institutions="I2" categories="">Thumansa Karunarathne</speaker>
+            <speaker id="S9" institutions="I2" categories="">Thumansa Karunarathna</speaker>
             <speaker id="S10" institutions="I2" categories="">Mihili Galahitiyawa</speaker>
             <speaker id="S11" institutions="I2" categories="">Thisari Vinupama Rodrigo</speaker>
             <speaker id="S12" institutions="I2" categories="">Adithya Fernando</speaker>
         </team>
         <team name="Asian International School A" code="Turkey" id="T4" break-eligibilities="BC1">
             <speaker id="S13" institutions="I3" categories="">Abdullah Yusoof</speaker>
-            <speaker id="S14" institutions="I3" categories="">Lehara Ediringhe</speaker>
+            <speaker id="S14" institutions="I3" categories="">Lehara Edirisinghe</speaker>
             <speaker id="S15" institutions="I3" categories="">Yaqeen Zuresh</speaker>
             <speaker id="S16" institutions="I3" categories="">Vrushali Edirisinghe</speaker>
         </team>
         <team name="Bishop&#8217;s College A" code="Chef Knife" id="T5" break-eligibilities="BC1">
             <speaker id="S17" institutions="I4" categories="">Ameesha Samarasinghe</speaker>
-            <speaker id="S18" institutions="I4" categories="">|Chrishelle Perera</speaker>
-            <speaker id="S19" institutions="I4" categories="">Shemali Abeygunawardana</speaker>
-            <speaker id="S20" institutions="I4" categories="">Safiya&#160;Bakeer&#160;Markar</speaker>
+            <speaker id="S18" institutions="I4" categories="">Chrishelle Perera</speaker>
+            <speaker id="S19" institutions="I4" categories="">Shemali Abeygunawardene</speaker>
+            <speaker id="S20" institutions="I4" categories="">Safiya Bakeer Makar</speaker>
         </team>
         <team name="Colombo International School A" code="Deep Bow" id="T6" break-eligibilities="BC1">
             <speaker id="S21" institutions="I5" categories="">Lee Yong</speaker>
             <speaker id="S22" institutions="I5" categories="">Akein Bandara</speaker>
-            <speaker id="S23" institutions="I5" categories="">Rudesh Ram</speaker>
+            <speaker id="S23" institutions="I5" categories="">Rudhesh Ram</speaker>
             <speaker id="S24" institutions="I5" categories="">Anisha Mahimbalan</speaker>
         </team>
         <team name="D. S. Senanayake College A" code="Cupid Arrow" id="T7" break-eligibilities="BC1">
@@ -1716,13 +1716,13 @@
             <speaker id="S29" institutions="I7" categories="">Okitha Karunadhara</speaker>
             <speaker id="S30" institutions="I7" categories="">Harish Sivagananathan</speaker>
             <speaker id="S31" institutions="I7" categories="">Ananya Nandakumar</speaker>
-            <speaker id="S32" institutions="I7" categories="">Visura&#160;Padeniya</speaker>
+            <speaker id="S32" institutions="I7" categories="">Visura Padeniya</speaker>
         </team>
         <team name="Gateway College Dehiwala A" code="Deciduous Tree" id="T9" break-eligibilities="BC1">
             <speaker id="S33" institutions="I8" categories="">Shazhadi Sujahudeen</speaker>
             <speaker id="S34" institutions="I8" categories="">Saif Imran</speaker>
             <speaker id="S35" institutions="I8" categories="">Sajjad Reyaz</speaker>
-            <speaker id="S36" institutions="I8" categories="">Dylan&#160;Pangoda</speaker>
+            <speaker id="S36" institutions="I8" categories="">Dylan Pangoda</speaker>
         </team>
         <team name="Hillwood College Kandy A" code="See No Evil" id="T10" break-eligibilities="BC1">
             <speaker id="S37" institutions="I9" categories="">Apoorva Jinadasa</speaker>
@@ -1744,8 +1744,8 @@
         <team name="Ladies College B" code="Ballet Shoes" id="T13" break-eligibilities="BC1">
             <speaker id="S48" institutions="I11" categories="">Anaiaha Surendran</speaker>
             <speaker id="S49" institutions="I11" categories="">Salma Khalid</speaker>
-            <speaker id="S50" institutions="I11" categories="">Sonalki Darmawansa</speaker>
-            <speaker id="S51" institutions="I11" categories="">Khanavee Suthaharen</speaker>
+            <speaker id="S50" institutions="I11" categories="">Sonalki Dharmawansa</speaker>
+            <speaker id="S51" institutions="I11" categories="">Khanavee Suthaharan</speaker>
         </team>
         <team name="Methodist College A" code="Spanner" id="T14" break-eligibilities="BC1">
             <speaker id="S52" institutions="I12" categories="">Amnah Jiffrey</speaker>
@@ -1775,13 +1775,13 @@
             <speaker id="S68" institutions="I15" categories="">Mauli Kularatne</speaker>
             <speaker id="S69" institutions="I15" categories="">Tharuli Rupasinghe</speaker>
             <speaker id="S70" institutions="I15" categories="">Nethma Madawala</speaker>
-            <speaker id="S71" institutions="I15" categories="">Tharuka&#160;Soyza</speaker>
+            <speaker id="S71" institutions="I15" categories="">Tharuka Soyza</speaker>
         </team>
         <team name="St. Bridget's Convent B" code="Butter" id="T19" break-eligibilities="BC1">
             <speaker id="S72" institutions="I15" categories="">Dineli Fernando</speaker>
             <speaker id="S73" institutions="I15" categories="">Salma Lafir</speaker>
-            <speaker id="S74" institutions="I15" categories="">Sheneli Senadira</speaker>
-            <speaker id="S75" institutions="I15" categories="">Erasma&#160;Fernando</speaker>
+            <speaker id="S74" institutions="I15" categories="">Sheneli Senadhira</speaker>
+            <speaker id="S75" institutions="I15" categories="">Erasma Fernando</speaker>
         </team>
         <team name="St Thomas' College Mount A" code="Candy" id="T20" break-eligibilities="BC1">
             <speaker id="S76" institutions="I14" categories="">Dihen Udumalagala</speaker>
@@ -1797,7 +1797,7 @@
         <team name="Trinity College Kandy B" code="Chilli" id="T22" break-eligibilities="BC1">
             <speaker id="S83" institutions="I17" categories="">Nethula Hettihewage</speaker>
             <speaker id="S84" institutions="I17" categories="">Kavindu Athukorala</speaker>
-            <speaker id="S85" institutions="I17" categories="">Chaniru&#160;Senhas</speaker>
+            <speaker id="S85" institutions="I17" categories="">Chaniru Senhas</speaker>
         </team>
         <team name="Visakha Vidyalaya A" code="Pickup Truck" id="T23" break-eligibilities="BC1">
             <speaker id="S87" institutions="I18" categories="">Savidya Fernando</speaker>
@@ -1806,10 +1806,10 @@
             <speaker id="S86" institutions="I18" categories="">Inu Ranasinghe</speaker>
         </team>
         <team name="Wesley College A" code="Evergreen Tree" id="T24" break-eligibilities="BC1">
-            <speaker id="S93" institutions="I19" categories="">Goyum</speaker>
+            <speaker id="S93" institutions="I19" categories="">Goyum Kaluthanthrige</speaker>
             <speaker id="S92" institutions="I19" categories="">Saajid Oowise</speaker>
             <speaker id="S90" institutions="I19" categories="">Afdhel Fayaz</speaker>
-            <speaker id="S91" institutions="I19" categories="">Easa Sheroz</speaker>
+            <speaker id="S91" institutions="I19" categories="">Easa Shiroz</speaker>
         </team>
         <adjudicator id="A128" name="Daniel Victor" core="false" independent="false" score="4.6"/>
         <adjudicator id="A130" name="Sahas Gunasekara" core="false" independent="false" score="4.8"/>

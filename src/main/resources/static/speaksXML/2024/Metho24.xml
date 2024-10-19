@@ -2619,11 +2619,11 @@
         <team name="Bishop's College Gold" code="Business Casual" id="T5" break-eligibilities="BC1">
             <speaker id="S17" institutions="I3" categories="">Deenah Sangani</speaker>
             <speaker id="S18" institutions="I3" categories="">Chrishelle Perera</speaker>
-            <speaker id="S19" institutions="I3" categories="">Safiya Bakeer Markar</speaker>
-            <speaker id="S20" institutions="I3" categories="">Sarah Hussain</speaker>
+            <speaker id="S19" institutions="I3" categories="">Safiya Bakeer Makar</speaker>
+            <speaker id="S20" institutions="I3" categories="">Sara Hussain</speaker>
         </team>
         <team name="Bishop's College Purple" code="Tap Water" id="T6" break-eligibilities="BC1">
-            <speaker id="S21" institutions="I3" categories="">Shemali Abeygunawardana</speaker>
+            <speaker id="S21" institutions="I3" categories="">Shemali Abeygunawardene</speaker>
             <speaker id="S22" institutions="I3" categories="">Manal Rahimdeen</speaker>
             <speaker id="S23" institutions="I3" categories="">Nethini Samarakoon</speaker>
             <speaker id="S24" institutions="I3" categories="">Thishakya</speaker>
@@ -2636,7 +2636,7 @@
         <team name="DBV" code="Up Trend" id="T8" break-eligibilities="BC1">
             <speaker id="S28" institutions="I5" categories="">B. Neha Hettiarachchi</speaker>
             <speaker id="S29" institutions="I5" categories="">Osandi Opara</speaker>
-            <speaker id="S30" institutions="I5" categories="">Kimuthu Thilakarathne</speaker>
+            <speaker id="S30" institutions="I5" categories="">Kimuthu Thilakarathna</speaker>
             <speaker id="S31" institutions="I5" categories="">Thehara Laksandi</speaker>
         </team>
         <team name="DS A" code="Chick" id="T9" break-eligibilities="BC1">
@@ -2706,9 +2706,9 @@
         </team>
         <team name="LC B" code="Moose" id="T20" break-eligibilities="BC1">
             <speaker id="S75" institutions="I14" categories="">Minudhi Joseph</speaker>
-            <speaker id="S76" institutions="I14" categories="">khanavee Sathahuranan</speaker>
+            <speaker id="S76" institutions="I14" categories="">khanavee Suthaharan</speaker>
             <speaker id="S77" institutions="I14" categories="">Sonalki Dharmawansa</speaker>
-            <speaker id="S78" institutions="I14" categories="">Mikeala Schrooman</speaker>
+            <speaker id="S78" institutions="I14" categories="">Mikaela Schoorman</speaker>
         </team>
         <team name="LISW" code="Rabbit" id="T21" break-eligibilities="BC1">
             <speaker id="S79" institutions="I15" categories="">Govindee Jayasekera</speaker>
@@ -2719,7 +2719,7 @@
             <speaker id="S82" institutions="I16" categories="">Sanushi Premaratne</speaker>
             <speaker id="S83" institutions="I16" categories="">Minanga Amarasinghe</speaker>
             <speaker id="S84" institutions="I16" categories="">Dinethmi Gunewardena</speaker>
-            <speaker id="S85" institutions="I16" categories="">Savindee Patinayake</speaker>
+            <speaker id="S85" institutions="I16" categories="">Savindee Pathinayake</speaker>
         </team>
         <team name="MLC" code="Spoon" id="T23" break-eligibilities="BC1">
             <speaker id="S86" institutions="I17" categories="">Seyyadha Nabeela Moulana</speaker>

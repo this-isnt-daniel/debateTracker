@@ -3352,7 +3352,7 @@
         </team>
         <team name="Anula Vidyalaya" code="Abacus" id="T2" break-eligibilities="BC1">
             <speaker id="S5" institutions="I2" categories="">Thisari Vinupama Rodrigo</speaker>
-            <speaker id="S6" institutions="I2" categories="">Thumansa Karunarathne</speaker>
+            <speaker id="S6" institutions="I2" categories="">Thumansa Karunarathna</speaker>
             <speaker id="S7" institutions="I2" categories="">Adithya Fernando</speaker>
             <speaker id="S8" institutions="I2" categories="">Supuni Jayaratne</speaker>
         </team>
@@ -3371,11 +3371,11 @@
         <team name="Colombo International School" code="Roller Skate" id="T5" break-eligibilities="BC1">
             <speaker id="S20" institutions="I5" categories="">Anya Vithanage</speaker>
             <speaker id="S17" institutions="I5" categories="">Lee Yong</speaker>
-            <speaker id="S18" institutions="I5" categories="">Rudesh Ram</speaker>
+            <speaker id="S18" institutions="I5" categories="">Rudhesh Ram</speaker>
             <speaker id="S19" institutions="I5" categories="">Akein Bandara</speaker>
         </team>
         <team name="Daybridge International School" code="Presents Tree" id="T6" break-eligibilities="BC1">
-            <speaker id="S21" institutions="I6" categories="">Aaron Elysha</speaker>
+            <speaker id="S21" institutions="I6" categories="">Aaron Elisha</speaker>
             <speaker id="S22" institutions="I6" categories="">Yoosuf Nayeem</speaker>
             <speaker id="S23" institutions="I6" categories="">Yuvishan Puniyamoorthi</speaker>
             <speaker id="S24" institutions="I6" categories="">Abu Bakr Rumy</speaker>
@@ -3393,10 +3393,10 @@
             <speaker id="S32" institutions="I8" categories="">Nuhan Gunasekara</speaker>
         </team>
         <team name="D. S. Senanayake College B" code="Coat" id="T9" break-eligibilities="BC1">
-            <speaker id="S33" institutions="I8" categories="">Danuth</speaker>
-            <speaker id="S34" institutions="I8" categories="">Heshitha</speaker>
-            <speaker id="S35" institutions="I8" categories="">Yasir</speaker>
-            <speaker id="S36" institutions="I8" categories="">Balishta</speaker>
+            <speaker id="S33" institutions="I8" categories="">Danuth Lokuge</speaker>
+            <speaker id="S34" institutions="I8" categories="">Heshitha Abeyratne</speaker>
+            <speaker id="S35" institutions="I8" categories="">Yasir Shuhail</speaker>
+            <speaker id="S36" institutions="I8" categories="">Balishta Nethadun</speaker>
         </team>
         <team name="Elizabeth Moir School A" code="Octopus" id="T10" break-eligibilities="BC1">
             <speaker id="S37" institutions="I9" categories="">Okitha Karunadhara</speaker>
@@ -3442,7 +3442,7 @@
         </team>
         <team name="Hillwood College B" code="Cricket" id="T17" break-eligibilities="BC1">
             <speaker id="S67" institutions="I13" categories="">Tharuli Silva</speaker>
-            <speaker id="S65" institutions="I13" categories="">Shenaya Senenayaka</speaker>
+            <speaker id="S65" institutions="I13" categories="">Shenaya Senanayake</speaker>
             <speaker id="S66" institutions="I13" categories="">Arushi Kossalawatte</speaker>
         </team>
         <team name="Holy Family Convent" code="Floppy" id="T18" break-eligibilities="BC1">
@@ -3475,7 +3475,7 @@
             <speaker id="S86" institutions="I17" categories="">Vithushana Rajaratnam</speaker>
         </team>
         <team name="Musaeus College A" code="Pricey Fruit" id="T23" break-eligibilities="BC1">
-            <speaker id="S87" institutions="I18" categories="">Dinethmi Gunawardena</speaker>
+            <speaker id="S87" institutions="I18" categories="">Dinethmi Gunewardena</speaker>
             <speaker id="S88" institutions="I18" categories="">Siddha Rajapaksha</speaker>
             <speaker id="S89" institutions="I18" categories="">Sandithmee Ranasinghe</speaker>
             <speaker id="S90" institutions="I18" categories="">Sanushi Premaratne</speaker>
@@ -3540,15 +3540,15 @@
             <speaker id="S127" institutions="I26" categories="">Hirush Kurukularachchi</speaker>
         </team>
         <team name="Sujatha Vidyalaya A" code="Persevering" id="T34" break-eligibilities="BC1">
-            <speaker id="S130" institutions="I27" categories="">Nethuki</speaker>
-            <speaker id="S128" institutions="I27" categories="">yuhani jayawaradna</speaker>
+            <speaker id="S130" institutions="I27" categories="">Nethuki Karunaratne</speaker>
+            <speaker id="S128" institutions="I27" categories="">yuhani Jayawardhana</speaker>
             <speaker id="S129" institutions="I27" categories="">Yenuki maleesa</speaker>
             <speaker id="S131" institutions="I27" categories="">-</speaker>
         </team>
         <team name="Trinity College A" code="Slithering" id="T35" break-eligibilities="BC1">
             <speaker id="S134" institutions="I28" categories="">Sanchitha Wickrama</speaker>
             <speaker id="S135" institutions="I28" categories="">Nethula Hettihewage</speaker>
-            <speaker id="S132" institutions="I28" categories="">Thesath Kappetiyagama</speaker>
+            <speaker id="S132" institutions="I28" categories="">Thesath Keppetiyagama</speaker>
             <speaker id="S133" institutions="I28" categories="">Kavindu Athukorala</speaker>
         </team>
         <team name="Trinity College B" code="Church" id="T36" break-eligibilities="BC1">
@@ -3571,7 +3571,7 @@
         </team>
         <team name="Wesley College A" code="Pancakes" id="T39" break-eligibilities="BC1">
             <speaker id="S149" institutions="I30" categories="">Afdhel fayaz</speaker>
-            <speaker id="S150" institutions="I30" categories="">Easa shereoz</speaker>
+            <speaker id="S150" institutions="I30" categories="">Easa Shiroz</speaker>
             <speaker id="S151" institutions="I30" categories="">Akil jahn</speaker>
             <speaker id="S148" institutions="I30" categories="">Shaheem Vazeer</speaker>
         </team>

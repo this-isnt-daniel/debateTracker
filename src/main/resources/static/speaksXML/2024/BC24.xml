@@ -1766,7 +1766,7 @@
         </team>
         <team name="Asian International School A" code="Television" id="T4" break-eligibilities="BC1">
             <speaker id="S12" institutions="I16" categories="">Abdullah Yusoof</speaker>
-            <speaker id="S13" institutions="I16" categories="">Lehara Ediringhe</speaker>
+            <speaker id="S13" institutions="I16" categories="">Lehara Edirisinghe</speaker>
             <speaker id="S14" institutions="I16" categories="">Sanjanaa Aravinth</speaker>
             <speaker id="S15" institutions="I16" categories="">Yaqeen Zuresh</speaker>
         </team>
@@ -1786,7 +1786,7 @@
             <speaker id="S24" institutions="I3" categories="">Vidath Marasinghe</speaker>
             <speaker id="S23" institutions="I3" categories="">Sadew Muthuhetti</speaker>
             <speaker id="S25" institutions="I3" categories="">Nuhan Gunasekara</speaker>
-            <speaker id="S26" institutions="I3" categories="">Didumika Peries</speaker>
+            <speaker id="S26" institutions="I3" categories="">Didumika Peiris</speaker>
         </team>
         <team name="Ecole International Kandy A" code="Top Hat" id="T8" break-eligibilities="BC1">
             <speaker id="S163" institutions="I15" categories="">Yousuf Razeen</speaker>
@@ -1810,7 +1810,7 @@
             <speaker id="S37" institutions="I7" categories="">Apoorva Jinadasa</speaker>
             <speaker id="S38" institutions="I7" categories="">Senithi Wijesooriya</speaker>
             <speaker id="S39" institutions="I7" categories="">Tharuli Silva</speaker>
-            <speaker id="S40" institutions="I7" categories="">Arushi Kossalawatta</speaker>
+            <speaker id="S40" institutions="I7" categories="">Arushi Kossalawatte</speaker>
         </team>
         <team name="Lyceum International School Wattala A" code="Handbag" id="T13" break-eligibilities="BC1">
             <speaker id="S44" institutions="I12" categories="">Govindee Balasuriya Jayasekera</speaker>
@@ -1826,8 +1826,8 @@
         </team>
         <team name="Musaeus College A" code="Red Apple" id="T15" break-eligibilities="BC1">
             <speaker id="S53" institutions="I2" categories="">Thenuki Perera</speaker>
-            <speaker id="S54" institutions="I2" categories="">Methuli Sri Nammuni</speaker>
-            <speaker id="S55" institutions="I2" categories="">Mihindi Patinayake</speaker>
+            <speaker id="S54" institutions="I2" categories="">Methuli Nammuni</speaker>
+            <speaker id="S55" institutions="I2" categories="">Mihindi Pathinayake</speaker>
             <speaker id="S56" institutions="I2" categories="">Thishakya Wijesundara</speaker>
         </team>
         <team name="Royal College A" code="Eagle" id="T16" break-eligibilities="BC1">
@@ -1837,7 +1837,7 @@
             <speaker id="S60" institutions="I8" categories="">Senuka Seneviratne</speaker>
         </team>
         <team name="Saiva Mangaiyar Vidyalayam A" code="Falafel" id="T17" break-eligibilities="BC1">
-            <speaker id="S160" institutions="I21" categories="">Thayaparan Barishnie</speaker>
+            <speaker id="S160" institutions="I21" categories="">Thayaparan Harishnie</speaker>
             <speaker id="S61" institutions="I21" categories="">Jeyapragash Shajini</speaker>
             <speaker id="S62" institutions="I21" categories="">Baskaran Hamsavani</speaker>
             <speaker id="S63" institutions="I21" categories="">Krishnamoorthy Vinya</speaker>
@@ -1869,7 +1869,7 @@
         <team name="Wesley College A" code="Hot Air" id="T23" break-eligibilities="BC1">
             <speaker id="S86" institutions="I6" categories="">Goyum Kaluthanthrige</speaker>
             <speaker id="S83" institutions="I6" categories="">Afdhel Fayaz</speaker>
-            <speaker id="S84" institutions="I6" categories="">Easa Sheroz</speaker>
+            <speaker id="S84" institutions="I6" categories="">Easa Shiroz</speaker>
             <speaker id="S85" institutions="I6" categories="">Ahamed Saajid</speaker>
         </team>
         <team name="Lyceum International School Gampaha A" code="Film" id="T31" break-eligibilities="BC1">

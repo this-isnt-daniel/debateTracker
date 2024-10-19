@@ -2627,14 +2627,14 @@
             <speaker id="S20" institutions="I22" categories="">Sahiru Ekanayake</speaker>
         </team>
         <team name="D. S. Senanayake College Black" code="Compression" id="T6" break-eligibilities="BC1">
-            <speaker id="S21" institutions="I10" categories="">Didumika Pieris</speaker>
+            <speaker id="S21" institutions="I10" categories="">Didumika Peiris</speaker>
             <speaker id="S22" institutions="I10" categories="">Heshitha Abeyratne</speaker>
-            <speaker id="S23" institutions="I10" categories="">Balishta Wijesinghe</speaker>
+            <speaker id="S23" institutions="I10" categories="">Balishta Nethadun</speaker>
         </team>
         <team name="D. S. Senanayake College Gold" code="Baggage" id="T7" break-eligibilities="BC1">
             <speaker id="S24" institutions="I10" categories="">Danuth Lokuge</speaker>
             <speaker id="S25" institutions="I10" categories="">Akein Siriwardane</speaker>
-            <speaker id="S26" institutions="I10" categories="">Yasir Suhail</speaker>
+            <speaker id="S26" institutions="I10" categories="">Yasir Shuhail</speaker>
             <speaker id="S27" institutions="I10" categories="">Disas Dinhas</speaker>
         </team>
         <team name="Gateway College Colombo A" code="Long Neck" id="T8" break-eligibilities="BC1">
@@ -2687,12 +2687,12 @@
         <team name="Lyceum International School Wattala A" code="Business Hi" id="T16" break-eligibilities="BC1">
             <speaker id="S62" institutions="I20" categories="">Prisandu Warnakulasooriyage</speaker>
             <speaker id="S59" institutions="I20" categories="">Aqmal Hamid</speaker>
-            <speaker id="S60" institutions="I20" categories="">Govindee Jayasekara</speaker>
-            <speaker id="S61" institutions="I20" categories="">Lavanya Premachandra</speaker>
+            <speaker id="S60" institutions="I20" categories="">Govindee Jayasekera</speaker>
+            <speaker id="S61" institutions="I20" categories="">Lavannya Premachandra</speaker>
         </team>
         <team name="Methodist College A" code="Tooth" id="T17" break-eligibilities="BC1">
             <speaker id="S63" institutions="I7" categories="">Rasheedah Jiffrey</speaker>
-            <speaker id="S64" institutions="I7" categories="">Sakthigaa Gnanakanthan</speaker>
+            <speaker id="S64" institutions="I7" categories="">Sakthiga Gnanakanthan</speaker>
             <speaker id="S65" institutions="I7" categories="">Laila Hazari</speaker>
             <speaker id="S66" institutions="I7" categories="">Maryam Razni</speaker>
         </team>
@@ -2705,7 +2705,7 @@
         <team name="Musaeus College B" code="Bird" id="T19" break-eligibilities="BC1">
             <speaker id="S71" institutions="I3" categories="">Anulya Wariyapola</speaker>
             <speaker id="S72" institutions="I3" categories="">Siddha Rajapaksha</speaker>
-            <speaker id="S73" institutions="I3" categories="">Dinethmi Gunawardena</speaker>
+            <speaker id="S73" institutions="I3" categories="">Dinethmi Gunewardena</speaker>
             <speaker id="S74" institutions="I3" categories="">Aanya De Silva</speaker>
         </team>
         <team name="Royal College Blue" code="True Neutral" id="T20" break-eligibilities="BC1">
@@ -2763,7 +2763,7 @@
         </team>
         <team name="Trinity College Kandy A" code="Three Sides" id="T30" break-eligibilities="BC1">
             <speaker id="S116" institutions="I24" categories="">Shahrukh Fairooz</speaker>
-            <speaker id="S114" institutions="I24" categories="">Muhammad Jameel</speaker>
+            <speaker id="S114" institutions="I24" categories="">Muhammed Jameel</speaker>
             <speaker id="S115" institutions="I24" categories="">Rehan Anandakumar</speaker>
         </team>
         <team name="Wesley College A" code="Unalive" id="T29" break-eligibilities="BC1">
@@ -2798,7 +2798,7 @@
         <adjudicator id="A140" name="Anielka Nallathamby" core="false" independent="false" score="2.5"/>
         <adjudicator id="A141" name="Treshan Fernanda" core="false" independent="false" score="2.5"/>
         <adjudicator id="A142" name="Shakeeb Mohideen" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A143" name="Rudesh Ram" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A143" name="Rudhesh Ram" core="false" independent="false" score="2.5"/>
         <adjudicator id="A144" name="Renishka Fernando" core="false" independent="false" score="2.5"/>
         <adjudicator id="A145" name="Dhyani Hapuarachchi" core="false" independent="false" score="2.5"/>
         <adjudicator id="A146" name="Chanidu Ratnayake" core="false" independent="false" score="2.5"/>
