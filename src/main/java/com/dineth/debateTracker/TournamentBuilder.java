@@ -31,10 +31,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -49,6 +46,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/tournament")
 public class TournamentBuilder {
 

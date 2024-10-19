@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController @Slf4j
+@CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/debater")
 public class DebaterController {
     private final DebaterService debaterService;
