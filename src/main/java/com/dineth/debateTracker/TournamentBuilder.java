@@ -23,10 +23,7 @@ import com.dineth.debateTracker.team.Team;
 import com.dineth.debateTracker.team.TeamService;
 import com.dineth.debateTracker.tournament.Tournament;
 import com.dineth.debateTracker.tournament.TournamentService;
-import com.dineth.debateTracker.utils.CustomExceptions;
-import com.dineth.debateTracker.utils.ParseCV;
-import com.dineth.debateTracker.utils.ParseTabbycatXML;
-import com.dineth.debateTracker.utils.StringUtil;
+import com.dineth.debateTracker.utils.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -343,7 +340,7 @@ public class TournamentBuilder {
                             } else if (sourceJudge != null){
                                 feedback.setSourceJudge(sourceJudge);
                             }
-                            feedbackService.addFeedback(feedback);
+//                            feedbackService.addFeedback(feedback);
                         } catch (Exception e) {
                             log.error("Error in adding feedback to judge : " + e.getMessage());
                         }
