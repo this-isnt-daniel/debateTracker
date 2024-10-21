@@ -40,6 +40,34 @@ public class InstitutionService {
             institutionRepository.save(institution);
         }
     }
+    //Merge multiple institutions
+    public Institution mergeMultipleInstitutions(List<Long> institutionIds) throws Exception {
+    //pick the first institution as the merged institution
+        Institution mergedInstitution = institutionRepository.findById(institutionIds.get(0)).orElse(null);
+        if (mergedInstitution == null) {
+            throw new Exception("First Institution not found");
+        }
+        List<Team> teams = new ArrayList<>();
+        for (Long id : institutionIds) {
+            Institution institution = institutionRepository.findById(id).orElse(null);
+            if (institution != null) {
+                teams.addAll(institution.getTeams());
+                institutionRepository.delete(institution);
+            }
+        }
+        mergedInstitution.setTeams(teams);
+        return institutionRepository.save(mergedInstitution);
+    }
 
-
+    public List<String> getInstitutionsWithSimilarNames(String name) {
+        List<String> l1 = institutionRepository.findSimilarInstitutions(name);
+        List<Institution> l2 = institutionRepository.findByNameContaining(name);
+        for (Institution i : l2) {
+            String temp =  i.getId() + "," + i.getName();
+            if (!l1.contains(temp)) {
+                l1.add(temp);
+            }
+        }
+        return l1;
+    }
 }
