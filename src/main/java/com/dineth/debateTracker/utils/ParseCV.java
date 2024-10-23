@@ -66,6 +66,12 @@ public class ParseCV {
                     log.error(e.getMessage());
                 }
                 try {
+                    debater.setDistrict(line[7].trim());
+                    log.debug(", District: " + line[7]);
+                } catch (Exception e) {
+                    log.error(e.getMessage());
+                }
+                try {
                     String gender = StringUtil.parseGender(line[8]);
                     debater.setGender(gender);
                     log.debug(", Gender: " + debater.getGender());

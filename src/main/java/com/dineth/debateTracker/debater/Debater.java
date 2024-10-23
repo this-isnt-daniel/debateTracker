@@ -1,5 +1,6 @@
 package com.dineth.debateTracker.debater;
 
+import com.dineth.debateTracker.institution.Institution;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,9 @@ public class Debater implements Serializable {
     private String gender;
     private String email;
     private String phone;
+    @ManyToOne
+    private Institution institution;
+    private String district;
     private Date birthdate;
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime createdAt;
@@ -55,6 +59,8 @@ public class Debater implements Serializable {
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", birthdate=" + birthdate +
+                ", institution='" + institution + '\'' +
+                ", district='" + district + '\'' +
                 '}';
     }
 }
