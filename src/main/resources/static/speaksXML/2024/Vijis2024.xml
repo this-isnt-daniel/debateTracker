@@ -2613,8 +2613,8 @@
                 <answer question="Q2">Goat</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A173" name="Lathurshana Uthayakumar" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A146" name="Chanidu Ratnayaka" core="false" independent="false" score="5.0">
+        <adjudicator id="A173" name="Lathurshana Udayakumar" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A146" name="Chanidu Ratnayake" core="false" independent="false" score="5.0">
             <feedback score="4.0" source-team="T3" debate="D47">
                 <answer question="Q1">True</answer>
                 <answer question="Q2">He gave quick an clear OA.</answer>
@@ -2685,7 +2685,7 @@
                 <answer question="Q2">Good decision, clearly justified it.</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A170" name="Indeevari" core="false" independent="false" score="4.0" institutions="I6">
+        <adjudicator id="A170" name="Indeevari De Silva" core="false" independent="false" score="4.0" institutions="I6">
             <feedback score="3.5" source-team="T4" debate="D49">
                 <answer question="Q1">True</answer>
                 <answer question="Q2">I think the adjudicator gave a fair voting. I didn't completely understand the
@@ -2773,7 +2773,7 @@
                 <answer question="Q2">Solid feedback</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A165" name="Shavindi Pieris" core="false" independent="false" score="4.0">
+        <adjudicator id="A165" name="Shavindri Pieris" core="false" independent="false" score="4.0">
             <feedback score="3.0" source-team="T22" debate="D83">
                 <answer question="Q1">True</answer>
             </feedback>
@@ -2977,7 +2977,7 @@
                 <answer question="Q2">Very descriptive OA and fairly assessed</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A144" name="Buthmini" core="false" independent="false" score="2.5">
+        <adjudicator id="A144" name="Buthmini Mohotty" core="false" independent="false" score="2.5">
             <feedback score="3.0" source-team="T11" debate="D39">
                 <answer question="Q1">True</answer>
             </feedback>
@@ -3036,7 +3036,7 @@
                 <answer question="Q2">It was quite good to get the personal feedback from her</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A193" name="Stephan" core="false" independent="false" score="2.5">
+        <adjudicator id="A193" name="Stephan Rodrigo" core="false" independent="false" score="2.5">
             <feedback score="3.0" source-team="T17" debate="D68">
                 <answer question="Q1">True</answer>
                 <answer question="Q2">Feedback was good. Somewhat distracted during the debate. However overall

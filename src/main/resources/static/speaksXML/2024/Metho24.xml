@@ -2817,7 +2817,7 @@
             </feedback>
         </adjudicator>
         <adjudicator id="A144" name="Husnaa Imtiaz" core="false" independent="false" score="4.0" institutions="I2"/>
-        <adjudicator id="A145" name="Jayageeth Bassnayaka" core="false" independent="false" score="2.0"
+        <adjudicator id="A145" name="Jayageeth Basnayake" core="false" independent="false" score="2.0"
                      institutions="I3">
             <feedback score="4.0" source-team="T26" debate="D25">
                 <answer question="Q1">Yes, for the reasons given in the OA</answer>
@@ -3395,7 +3395,7 @@
                 <answer question="Q5">8</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A139" name="Lathurshana Uthayakumar" core="false" independent="false" score="1.0">
+        <adjudicator id="A139" name="Lathurshana Udayakumar" core="false" independent="false" score="1.0">
             <feedback score="2.0" source-team="T17" debate="D55">
                 <answer question="Q1">Yes, for different reasons than given in the OA</answer>
                 <answer question="Q3">2</answer>
@@ -3449,7 +3449,7 @@
                 </answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A128" name="Yeshaiah Peiris" core="false" independent="false" score="3.0">
+        <adjudicator id="A128" name="Yeshiah Peries" core="false" independent="false" score="3.0">
             <feedback score="4.0" source-team="T24" debate="D21">
                 <answer question="Q1">Yes, for the reasons given in the OA</answer>
                 <answer question="Q3">7</answer>
@@ -3483,7 +3483,7 @@
                 <answer question="Q2">Average Nevan Ws, focuses on the right things.</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A137" name="Imaadh Iftikhar" core="false" independent="false" score="5.0">
+        <adjudicator id="A137" name="Imaadh Ifthikar" core="false" independent="false" score="5.0">
             <feedback score="5.0" source-team="T33" debate="D30">
                 <answer question="Q1">Yes, for the reasons given in the OA</answer>
                 <answer question="Q3">10</answer>

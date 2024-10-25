@@ -2341,12 +2341,12 @@
         <adjudicator id="A35" name="Dinuka Wickramasinghe" core="false" independent="false"
             score="2.5" />
         <adjudicator id="A12" name="Talal Sabry" core="false" independent="false" score="2.5" />
-        <adjudicator id="A11" name="Mithsandie Seneviratne" core="false" independent="false"
+        <adjudicator id="A11" name="Mithsandi Seneviratne" core="false" independent="false"
             score="2.5" />
         <adjudicator id="A17" name="Mineth Galahitiyawa" core="false" independent="false"
             score="2.5" />
         <adjudicator id="A63" name="Lara Jayasiri" core="false" independent="false" score="2.5" />
-        <adjudicator id="A62" name="Shavindri Peiris" core="false" independent="false" score="2.5" />
+        <adjudicator id="A62" name="Shavindri Pieris" core="false" independent="false" score="2.5" />
         <adjudicator id="A59" name="Shenaya Rodrigo" core="false" independent="false" score="2.5" />
         <adjudicator id="A56" name="Shakeeb Mohideen" core="false" independent="false" score="2.5" />
         <adjudicator id="A8" name="Rudrajit Ravi" core="false" independent="false" score="2.5" />
@@ -2369,7 +2369,7 @@
         <adjudicator id="A195" name="Chanidu Ratnayake" core="false" independent="false" score="2.5" />
         <adjudicator id="A66" name="Mahum Kidwai" core="false" independent="false" score="2.5"
             institutions="I15" />
-        <adjudicator id="A196" name="Nevan Serasundara" core="false" independent="false" score="2.5" />
+        <adjudicator id="A196" name="Nevan Serasundera" core="false" independent="false" score="2.5" />
         <adjudicator id="A197" name="Aliza Hussain" core="false" independent="false" score="2.5" />
         <adjudicator id="A198" name="Zaakir Zulfikar" core="false" independent="false" score="2.5" />
         <adjudicator id="A199" name="Suchith Tissera" core="false" independent="false" score="2.5" />

@@ -3586,60 +3586,60 @@
             <speaker id="S209" categories="">Speaker 2</speaker>
             <speaker id="S210" categories="">Speaker 3</speaker>
         </team>
-        <adjudicator id="A183" name="Gimhan" core="false" independent="false" score="2.5" institutions="I1"/>
-        <adjudicator id="A184" name="Renishka" core="false" independent="false" score="2.5" institutions="I2"/>
-        <adjudicator id="A185" name="Oneli" core="false" independent="false" score="2.5" institutions="I3"/>
-        <adjudicator id="A186" name="Jayageeth" core="false" independent="false" score="2.5" institutions="I4"/>
-        <adjudicator id="A187" name="Anugi" core="false" independent="false" score="2.5" institutions="I5"/>
-        <adjudicator id="A205" name="Virul" core="false" independent="false" score="2.5" institutions="I8"/>
-        <adjudicator id="A188" name="Chavika" core="false" independent="false" score="2.5" institutions="I9"/>
-        <adjudicator id="A189" name="Parinda" core="false" independent="false" score="2.5" institutions="I10"/>
-        <adjudicator id="A190" name="Sameesha" core="false" independent="false" score="2.5" institutions="I14"/>
-        <adjudicator id="A191" name="Maryam" core="false" independent="false" score="2.5" institutions="I15"/>
-        <adjudicator id="A193" name="Venuka" core="false" independent="false" score="2.5" institutions="I16"/>
+        <adjudicator id="A183" name="Gimhan Sooriyabandara" core="false" independent="false" score="2.5" institutions="I1"/>
+        <adjudicator id="A184" name="Renishka Fernando" core="false" independent="false" score="2.5" institutions="I2"/>
+        <adjudicator id="A185" name="Oneli De Silva" core="false" independent="false" score="2.5" institutions="I3"/>
+        <adjudicator id="A186" name="Jayageeth Basnayake" core="false" independent="false" score="2.5" institutions="I4"/>
+        <adjudicator id="A187" name="Anugi Silva" core="false" independent="false" score="2.5" institutions="I5"/>
+        <adjudicator id="A205" name="Virul Abeysuriya" core="false" independent="false" score="2.5" institutions="I8"/>
+        <adjudicator id="A188" name="Chavika Samaraweera" core="false" independent="false" score="2.5" institutions="I9"/>
+        <adjudicator id="A189" name="Parinda Ratnayake" core="false" independent="false" score="2.5" institutions="I10"/>
+        <adjudicator id="A190" name="Sameesha Dissanayake" core="false" independent="false" score="2.5" institutions="I14"/>
+        <adjudicator id="A191" name="Maryam Rizvi" core="false" independent="false" score="2.5" institutions="I15"/>
+        <adjudicator id="A193" name="Venuka Bhashitha" core="false" independent="false" score="2.5" institutions="I16"/>
         <adjudicator id="A192" name="Kavithi" core="false" independent="false" score="2.5" institutions="I16"/>
-        <adjudicator id="A194" name="Shavindi" core="false" independent="false" score="2.5" institutions="I17"/>
-        <adjudicator id="A195" name="Indeevari" core="false" independent="false" score="2.5" institutions="I18"/>
+        <adjudicator id="A194" name="Shavindri Pieris" core="false" independent="false" score="2.5" institutions="I17"/>
+        <adjudicator id="A195" name="Indeevari De Silva" core="false" independent="false" score="2.5" institutions="I18"/>
         <adjudicator id="A196" name="Sadika" core="false" independent="false" score="2.5" institutions="I19"/>
         <adjudicator id="A197" name="Ridha Tharik" core="false" independent="false" score="2.5" institutions="I23"/>
-        <adjudicator id="A199" name="Shruthika" core="false" independent="false" score="2.5" institutions="I24"/>
-        <adjudicator id="A198" name="Lara" core="false" independent="false" score="2.5" institutions="I24"/>
-        <adjudicator id="A200" name="Ganan" core="false" independent="false" score="2.5" institutions="I25"/>
+        <adjudicator id="A199" name="Shruthika Prathapan" core="false" independent="false" score="2.5" institutions="I24"/>
+        <adjudicator id="A198" name="Lara Jayasiri" core="false" independent="false" score="2.5" institutions="I24"/>
+        <adjudicator id="A200" name="Ganan Kugan" core="false" independent="false" score="2.5" institutions="I25"/>
         <adjudicator id="A201" name="Dinuka perera" core="false" independent="false" score="2.5" institutions="I26"/>
-        <adjudicator id="A202" name="Janidu" core="false" independent="false" score="2.5" institutions="I28"/>
-        <adjudicator id="A203" name="Daniel" core="false" independent="false" score="2.5" institutions="I31"/>
-        <adjudicator id="A213" name="Lithmal" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A212" name="Aliza" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A211" name="Thishy &lt;3" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A202" name="Janidu Jayasekera" core="false" independent="false" score="2.5" institutions="I28"/>
+        <adjudicator id="A203" name="Daniel Victor" core="false" independent="false" score="2.5" institutions="I31"/>
+        <adjudicator id="A213" name="Lithmal Jayawardhana" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A212" name="Aliza Hussain" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A211" name="Thishya Mendis" core="false" independent="false" score="2.5"/>
         <adjudicator id="A206" name="Vyshalini" core="false" independent="false" score="2.5"/>
         <adjudicator id="A182" name="Danushan" core="false" independent="false" score="2.5"/>
         <adjudicator id="A181" name="Aqeelah" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A180" name="Nubendra" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A179" name="Ranudi" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A178" name="Chanidu" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A177" name="Thisuru" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A176" name="Dinuka" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A175" name="Dineth" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A174" name="Venuka" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A173" name="Dhyani" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A180" name="Nubendra Liyanage" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A179" name="Ranudi Jayasinghe" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A178" name="Chanidu Ratnayake" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A177" name="Thisuru Hettiarachchi" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A176" name="Dinuka Wickramasinghe" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A175" name="Dineth Hettiarachchi" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A174" name="Venuka Bhashitha" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A173" name="Dhyani Hapuarachchi" core="false" independent="false" score="2.5"/>
         <adjudicator id="A172" name="Bavathmika" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A171" name="Jeewantha" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A170" name="Reiha" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A169" name="Mithsandie" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A168" name="Shakeeb" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A167" name="Dinusha" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A166" name="Lolonyo" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A165" name="Chirathi" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A164" name="Janul" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A163" name="Anah" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A162" name="Rachel" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A161" name="Amandhi" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A160" name="Rusira" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A159" name="Sahas" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A158" name="Naika" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A171" name="Jeewantha Induwara" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A170" name="Reiha Wimalasekara" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A169" name="Mithsandi Seneviratne" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A168" name="Shakeeb Mohideen" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A167" name="Dinusha Pathirana" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A166" name="Lolonyo Rahulan" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A165" name="Chirathi Perera" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A164" name="Janul De Silva" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A163" name="Anah Cassim" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A162" name="Rachel Cramer" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A161" name="Amandhi Marasinghe" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A160" name="Rusira Ekanayake" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A159" name="Sahas Gunasekara" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A158" name="Naika Gooneratne" core="false" independent="false" score="2.5"/>
         <adjudicator id="A157" name="Yashith" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A156" name="Dayadi" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A214" name="Suchith" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A156" name="Dayadi Seneviratne" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A214" name="Suchith Tissera" core="false" independent="false" score="2.5"/>
     </participants>
     <break-category id="BC1">Open</break-category>
     <institution id="I1" reference="ABV">Ananda Balika Vidyalaya</institution>

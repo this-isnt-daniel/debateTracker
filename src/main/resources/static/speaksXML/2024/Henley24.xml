@@ -2066,10 +2066,10 @@
             <speaker id="S397" categories="">Swing 2</speaker>
         </team>
         <adjudicator id="A374" name="Kavinethere" core="false" independent="false" score="0.0" institutions="I36"/>
-        <adjudicator id="A377" name="Danidhu" core="false" independent="false" score="4.0" institutions="I33"/>
-        <adjudicator id="A380" name="Sahas" core="false" independent="false" score="4.7"/>
-        <adjudicator id="A381" name="Sandil" core="false" independent="false" score="4.7"/>
-        <adjudicator id="A386" name="Daniel" core="false" independent="false" score="0.0">
+        <adjudicator id="A377" name="Danidhu Vithanawasam" core="false" independent="false" score="4.0" institutions="I33"/>
+        <adjudicator id="A380" name="Sahas Gunasekara" core="false" independent="false" score="4.7"/>
+        <adjudicator id="A381" name="Sandil Ranasinghe" core="false" independent="false" score="4.7"/>
+        <adjudicator id="A386" name="Daniel Victor" core="false" independent="false" score="0.0">
             <feedback score="4.0" source-team="T52" debate="D94">
                 <answer question="Q12">True</answer>
                 <answer question="Q4">Good</answer>
@@ -2081,11 +2081,11 @@
                 <answer question="Q10">['clear']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A387" name="Mauli" core="false" independent="false" score="0.0"/>
-        <adjudicator id="A376" name="Aliza" core="false" independent="false" score="4.5" institutions="I25"/>
-        <adjudicator id="A388" name="Imaadh" core="false" independent="false" score="4.4"/>
-        <adjudicator id="A389" name="Afrah" core="false" independent="false" score="0.0"/>
-        <adjudicator id="A390" name="Yeshaiah" core="false" independent="false" score="0.0">
+        <adjudicator id="A387" name="Mauli Kularatne" core="false" independent="false" score="0.0"/>
+        <adjudicator id="A376" name="Aliza Hussain" core="false" independent="false" score="4.5" institutions="I25"/>
+        <adjudicator id="A388" name="Imaadh Ifthikar" core="false" independent="false" score="4.4"/>
+        <adjudicator id="A389" name="Afrah Athahurahman" core="false" independent="false" score="0.0"/>
+        <adjudicator id="A390" name="Yeshiah Peries" core="false" independent="false" score="0.0">
             <feedback score="4.0" source-team="T57" debate="D80">
                 <answer question="Q12">True</answer>
                 <answer question="Q13">OA and personal feedback was concise and descriptive. Rebuttal and contentions
@@ -2100,11 +2100,11 @@
                 <answer question="Q10">['clear', 'concise', 'attentive']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A400" name="Mithsandi" core="false" independent="false" score="0.0"/>
+        <adjudicator id="A400" name="Mithsandi Seneviratne" core="false" independent="false" score="0.0"/>
         <adjudicator id="A391" name="Dinuka" core="false" independent="false" score="0.0"/>
-        <adjudicator id="A375" name="Husnaa" core="false" independent="false" score="4.2" institutions="I17"/>
-        <adjudicator id="A378" name="Raaya" core="false" independent="false" score="4.0" institutions="I23"/>
-        <adjudicator id="A379" name="Shavi" core="false" independent="false" score="4.7">
+        <adjudicator id="A375" name="Husnaa Imtiaz" core="false" independent="false" score="4.2" institutions="I17"/>
+        <adjudicator id="A378" name="Raaya De Silva" core="false" independent="false" score="4.0" institutions="I23"/>
+        <adjudicator id="A379" name="Shavindri Pieris" core="false" independent="false" score="4.7">
             <feedback score="4.0" source-team="T51" debate="D103">
                 <answer question="Q12">True</answer>
                 <answer question="Q13">Went on many tangents about context</answer>
@@ -2117,11 +2117,11 @@
                 <answer question="Q10">['rambly']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A351" name="Senara" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A351" name="Senara Vidanapathirana" core="false" independent="false" score="2.5"/>
         <adjudicator id="A345" name="Saajid" core="false" independent="false" score="0.0"/>
         <adjudicator id="A331" name="Ameerah" core="false" independent="false" score="3.5"/>
-        <adjudicator id="A332" name="Anah" core="false" independent="false" score="4.7"/>
-        <adjudicator id="A333" name="Chanidu" core="false" independent="false" score="4.8">
+        <adjudicator id="A332" name="Anah Cassim" core="false" independent="false" score="4.7"/>
+        <adjudicator id="A333" name="Chanidu Ratnayake" core="false" independent="false" score="4.8">
             <feedback score="5.0" source-team="T59" debate="D86">
                 <answer question="Q12">True</answer>
                 <answer question="Q4">Very Clear</answer>
@@ -2133,7 +2133,7 @@
                 <answer question="Q10">['clear', 'concise', 'attentive']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A362" name="Chavika" core="false" independent="false" score="4.8" institutions="I35">
+        <adjudicator id="A362" name="Chavika Samaraweera" core="false" independent="false" score="4.8" institutions="I35">
             <feedback score="3.0" source-team="T52" debate="D81">
                 <answer question="Q12">True</answer>
                 <answer question="Q4">Good</answer>
@@ -2165,13 +2165,13 @@
                 <answer question="Q10">['clear', 'concise', 'attentive']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A334" name="Chirathi" core="false" independent="false" score="4.5"/>
-        <adjudicator id="A363" name="Dhyani" core="false" independent="false" score="3.0" institutions="I34"/>
-        <adjudicator id="A372" name="Dineth" core="false" independent="false" score="4.7" institutions="I22"/>
-        <adjudicator id="A335" name="Emma" core="false" independent="false" score="4.7"/>
-        <adjudicator id="A367" name="Gavin" core="false" independent="false" score="4.7" institutions="I16"/>
-        <adjudicator id="A336" name="Humaid" core="false" independent="false" score="4.7"/>
-        <adjudicator id="A366" name="Indeewari" core="false" independent="false" score="4.5" institutions="I27">
+        <adjudicator id="A334" name="Chirathi Perera" core="false" independent="false" score="4.5"/>
+        <adjudicator id="A363" name="Dhyani Hapuarachchi" core="false" independent="false" score="3.0" institutions="I34"/>
+        <adjudicator id="A372" name="Dineth Hettiarachchi" core="false" independent="false" score="4.7" institutions="I22"/>
+        <adjudicator id="A335" name="Emma Premaratne" core="false" independent="false" score="4.7"/>
+        <adjudicator id="A367" name="Gavin Senaratne" core="false" independent="false" score="4.7" institutions="I16"/>
+        <adjudicator id="A336" name="Humaid Saleem" core="false" independent="false" score="4.7"/>
+        <adjudicator id="A366" name="Indeevari De Silva" core="false" independent="false" score="4.5" institutions="I27">
             <feedback score="2.0" source-team="T65" debate="D89">
                 <answer question="Q12">False</answer>
                 <answer question="Q13">She seems to Support LGBTQ+ and is biased even though we had better argumentaiton
@@ -2186,8 +2186,8 @@
                 <answer question="Q10">['biased', 'inattentive']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A338" name="Jamila" core="false" independent="false" score="4.0"/>
-        <adjudicator id="A339" name="Janidu" core="false" independent="false" score="4.2">
+        <adjudicator id="A338" name="Jamila Latiff" core="false" independent="false" score="4.0"/>
+        <adjudicator id="A339" name="Janidu Jayasekera" core="false" independent="false" score="4.2">
             <feedback score="4.0" source-team="T69" debate="D73">
                 <answer question="Q12">True</answer>
                 <answer question="Q4">Underanalyzed</answer>
@@ -2199,8 +2199,8 @@
                 <answer question="Q10">['concise']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A340" name="Janul" core="false" independent="false" score="4.8"/>
-        <adjudicator id="A359" name="Jayageeth" core="false" independent="false" score="4.1" institutions="I20">
+        <adjudicator id="A340" name="Janul De Silva" core="false" independent="false" score="4.8"/>
+        <adjudicator id="A359" name="Jayageeth Basnayake" core="false" independent="false" score="4.1" institutions="I20">
             <feedback score="3.0" source-team="T66" debate="D95">
                 <answer question="Q12">True</answer>
                 <answer question="Q4">Clear</answer>
@@ -2212,8 +2212,8 @@
                 <answer question="Q10">['concise']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A341" name="Kithmina" core="false" independent="false" score="4.8"/>
-        <adjudicator id="A342" name="Lara" core="false" independent="false" score="4.4">
+        <adjudicator id="A341" name="Kithmina De Silva" core="false" independent="false" score="4.8"/>
+        <adjudicator id="A342" name="Lara Jayasiri" core="false" independent="false" score="4.4">
             <feedback score="2.0" source-team="T66" debate="D75">
                 <answer question="Q12">False</answer>
                 <answer question="Q13">1. Disregarded important analysis mentioned within the round.
@@ -2250,7 +2250,7 @@
                 <answer question="Q10">['inattentive']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A343" name="Lolonyo" core="false" independent="false" score="4.0">
+        <adjudicator id="A343" name="Lolonyo Rahulan" core="false" independent="false" score="4.0">
             <feedback score="2.0" source-team="T51" debate="D79">
                 <answer question="Q12">True</answer>
                 <answer question="Q13">Feedback not substantive, focused on wrong things. Unstructured OA</answer>
@@ -2264,11 +2264,11 @@
             </feedback>
         </adjudicator>
         <adjudicator id="A337" name="Ishara" core="false" independent="false" score="0.0"/>
-        <adjudicator id="A344" name="Mithsandi" core="false" independent="false" score="4.7"/>
+        <adjudicator id="A344" name="Mithsandi Seneviratne" core="false" independent="false" score="4.7"/>
         <adjudicator id="A346" name="Navidi" core="false" independent="false" score="0.0"/>
         <adjudicator id="A368" name="Nethru" core="false" independent="false" score="0.0" institutions="I28"/>
-        <adjudicator id="A358" name="Oneli" core="false" independent="false" score="4.0" institutions="I17"/>
-        <adjudicator id="A357" name="Rachel" core="false" independent="false" score="4.6">
+        <adjudicator id="A358" name="Oneli De Silva" core="false" independent="false" score="4.0" institutions="I17"/>
+        <adjudicator id="A357" name="Rachel Cramer" core="false" independent="false" score="4.6">
             <feedback score="3.5" source-team="T66" debate="D85">
                 <answer question="Q12">True</answer>
                 <answer question="Q13">Clear oral adjudication, fair decision</answer>
@@ -2291,19 +2291,19 @@
                 <answer question="Q10">['clear']</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A347" name="Reiha" core="false" independent="false" score="4.6"/>
-        <adjudicator id="A361" name="Rusiru" core="false" independent="false" score="3.8" institutions="I19"/>
-        <adjudicator id="A349" name="Sameesha" core="false" independent="false" score="4.2"/>
-        <adjudicator id="A350" name="Sarala" core="false" independent="false" score="4.0"/>
-        <adjudicator id="A373" name="Shakeeb" core="false" independent="false" score="4.5" institutions="I30"/>
-        <adjudicator id="A352" name="Shenaya" core="false" independent="false" score="4.0"/>
-        <adjudicator id="A353" name="Shruthika" core="false" independent="false" score="4.6"/>
-        <adjudicator id="A370" name="Suchith" core="false" independent="false" score="4.8" institutions="I15"/>
-        <adjudicator id="A354" name="Thisuru" core="false" independent="false" score="4.7"/>
-        <adjudicator id="A364" name="Thithira" core="false" independent="false" score="4.5" institutions="I23"/>
-        <adjudicator id="A355" name="Vihara" core="false" independent="false" score="0.0"/>
+        <adjudicator id="A347" name="Reiha Wimalasekara" core="false" independent="false" score="4.6"/>
+        <adjudicator id="A361" name="Rusiru Ekanayake" core="false" independent="false" score="3.8" institutions="I19"/>
+        <adjudicator id="A349" name="Sameesha Dissanayake" core="false" independent="false" score="4.2"/>
+        <adjudicator id="A350" name="Sarala Hapugalle" core="false" independent="false" score="4.0"/>
+        <adjudicator id="A373" name="Shakeeb Mohideen" core="false" independent="false" score="4.5" institutions="I30"/>
+        <adjudicator id="A352" name="Shenaya Rodrigo" core="false" independent="false" score="4.0"/>
+        <adjudicator id="A353" name="Shruthika Prathapan" core="false" independent="false" score="4.6"/>
+        <adjudicator id="A370" name="Suchith Tissera" core="false" independent="false" score="4.8" institutions="I15"/>
+        <adjudicator id="A354" name="Thisuru Hettiarachchi" core="false" independent="false" score="4.7"/>
+        <adjudicator id="A364" name="Thithira Jayakody" core="false" independent="false" score="4.5" institutions="I23"/>
+        <adjudicator id="A355" name="Vihara Fernandopulle" core="false" independent="false" score="0.0"/>
         <adjudicator id="A369" name="Yenuki" core="false" independent="false" score="0.0" institutions="I32"/>
-        <adjudicator id="A371" name="Yeshani" core="false" independent="false" score="3.5" institutions="I29">
+        <adjudicator id="A371" name="Yeshani Fernando" core="false" independent="false" score="3.5" institutions="I29">
             <feedback score="5.0" source-team="T65" debate="D77">
                 <answer question="Q12">True</answer>
                 <answer question="Q4">Good</answer>

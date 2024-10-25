@@ -3744,8 +3744,8 @@
             </feedback>
         </adjudicator>
         <adjudicator id="A221" name="Muftee" core="false" independent="false" score="3.5"/>
-        <adjudicator id="A225" name="Rudrajith" core="false" independent="false" score="1.0"/>
-        <adjudicator id="A229" name="Risindu" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A225" name="Rudrajith Ravi" core="false" independent="false" score="1.0"/>
+        <adjudicator id="A229" name="Risindu Piyasena" core="false" independent="false" score="2.5"/>
         <adjudicator id="A185" name="Nevan Serasundera" core="false" independent="false" score="5.0">
             <feedback score="4.0" source-team="T4" debate="D144">
                 <answer question="Q1">True</answer>
@@ -3916,7 +3916,7 @@
         </adjudicator>
         <adjudicator id="A190" name="Maryam Mohamed Rizvi" core="false" independent="false" score="2.5"/>
         <adjudicator id="A199" name="Buthmini Levhara Mohotty" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A215" name="Senara" core="false" independent="false" score="3.5">
+        <adjudicator id="A215" name="Senara Vidanapathirana" core="false" independent="false" score="3.5">
             <feedback score="5.0" source-team="T37" debate="D148">
                 <answer question="Q1">True</answer>
                 <answer question="Q2">The adjudication was valuable .</answer>
@@ -3931,7 +3931,7 @@
                 <answer question="Q2">It was slightly biased in our opinion</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A213" name="Imaadh" core="false" independent="false" score="4.0">
+        <adjudicator id="A213" name="Imaadh Ifthikar" core="false" independent="false" score="4.0">
             <feedback score="3.0" source-team="T4" debate="D107">
                 <answer question="Q1">True</answer>
             </feedback>
@@ -3971,7 +3971,7 @@
                 <answer question="Q1">True</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A188" name="Lolonyo" core="false" independent="false" score="3.0">
+        <adjudicator id="A188" name="Lolonyo Rahulan" core="false" independent="false" score="3.0">
             <feedback score="4.0" source-team="T8" debate="D140">
                 <answer question="Q1">True</answer>
             </feedback>

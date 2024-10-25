@@ -4222,7 +4222,7 @@
                 <answer question="Q37">10</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A167" name="Jeewantha Induruwa" core="false" independent="false"
+        <adjudicator id="A167" name="Jeewantha Induwara" core="false" independent="false"
                      score="2.0">
             <feedback score="3.0" source-team="T29" debate="D296">
                 <answer question="Q1">Yes, for the reasons given in the OA</answer>
@@ -4656,7 +4656,7 @@
             </feedback>
         </adjudicator>
         <adjudicator id="A5" name="Chanidu Ratnayake" core="false" independent="false" score="5.0" />
-        <adjudicator id="A2" name="Reiha Wimalasekere" core="false" independent="false" score="5.0">
+        <adjudicator id="A2" name="Reiha Wimalasekara" core="false" independent="false" score="5.0">
             <feedback score="3.5" source-team="T2" debate="D276">
                 <answer question="Q1">Yes, for the reasons given in the OA</answer>
                 <answer question="Q34">6</answer>
