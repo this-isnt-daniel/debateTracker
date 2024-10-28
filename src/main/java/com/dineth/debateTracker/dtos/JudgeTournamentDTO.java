@@ -8,13 +8,15 @@ import java.util.List;
 
 @Getter @Setter @NoArgsConstructor
 public class JudgeTournamentDTO {
+    private Long id;
     private String firstName;
     private String lastName;
     private String tournamentShortName;
     private String phone;
     private List<String> rounds;
 
-    public JudgeTournamentDTO(String firstName, String lastName, String phone, List<String> rounds, String tournamentShortName) {
+    public JudgeTournamentDTO(Long id, String firstName, String lastName, String phone, List<String> rounds, String tournamentShortName) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;

@@ -1,5 +1,6 @@
 package com.dineth.debateTracker.judge;
 
+import com.dineth.debateTracker.dtos.JudgeRoundStatDTO;
 import com.dineth.debateTracker.dtos.JudgeTournamentDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,9 +44,10 @@ public class JudgeService {
             String[] roundArray = (String[]) obj[2];
             List<String> rounds = new ArrayList<>(Arrays.asList(roundArray));
             String tournamentShortName = (String) obj[3];
+            Long judgeId = (Long) obj[4];
 
-            String key = firstName + " " + lastName + " " + tournamentShortName;
-            JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(firstName, lastName, "", rounds, tournamentShortName);
+            String key = judgeId + " " + tournamentShortName;
+            JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", rounds, tournamentShortName);
             map.put(key, judgeTournamentDTO);
         }
 
@@ -56,14 +58,15 @@ public class JudgeService {
             String[] roundArray = (String[]) obj[2];
             List<String> rounds = Arrays.asList(roundArray);
             String tournamentShortName = (String) obj[3];
+            Long judgeId = (Long) obj[4];
 
-            String key = firstName + " " + lastName + " " + tournamentShortName;
+            String key = judgeId + " " + tournamentShortName;
             JudgeTournamentDTO judgeTournamentDTO = map.get(key);
 
             if (judgeTournamentDTO != null) {
                 judgeTournamentDTO.getRounds().addAll(rounds);  // Merge rounds if exists
             } else {
-                judgeTournamentDTO = new JudgeTournamentDTO(firstName, lastName, "", rounds, tournamentShortName);
+                judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", rounds, tournamentShortName);
                 map.put(key, judgeTournamentDTO);  // Add to map if new
             }
         }
@@ -75,7 +78,7 @@ public class JudgeService {
         List<Object[]> tempPrelims = judgeRepository.getJudgesByTournamentPrelims();
         List<Object[]> tempBreaks = judgeRepository.getJudgesByTournamentBreaks();
 
-        HashMap<String, JudgeTournamentDTO> map = new HashMap<>();
+        HashMap<Long, JudgeTournamentDTO> map = new HashMap<>();
 
         // Process prelim rounds
         for (Object[] obj : tempPrelims) {
@@ -83,10 +86,10 @@ public class JudgeService {
             String lastName = (String) obj[1];
             String[] tournamentArray = (String[]) obj[2];  // Cast to String[]
             List<String> tournaments = Arrays.asList(tournamentArray);  // Convert to List<String>
+            Long judgeId = (Long) obj[3];
 
-            JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(firstName, lastName, "", tournaments, "");
-            String key = firstName + " " + lastName;
-            map.put(key, judgeTournamentDTO);
+            JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", tournaments, "");
+            map.put(judgeId, judgeTournamentDTO);
         }
         // Process break rounds
         for (Object[] obj : tempBreaks) {
@@ -94,34 +97,63 @@ public class JudgeService {
             String lastName = (String) obj[1];
             String[] tournamentArray = (String[]) obj[2];  // Cast to String[]
             List<String> tournaments = Arrays.asList(tournamentArray);  // Convert to List<String>
+            Long judgeId = (Long) obj[3];
 
-            JudgeTournamentDTO judgeTournamentDTO = map.get(firstName + " " + lastName);
+            JudgeTournamentDTO judgeTournamentDTO = map.get(judgeId);
             if (judgeTournamentDTO != null) {
                 //merge tournaments if exists and get distinct values
                 Set<String> set = new HashSet<>(judgeTournamentDTO.getRounds());
                 set.addAll(tournaments);
                 judgeTournamentDTO.setRounds(new ArrayList<>(set));
-                map.put(firstName + " " + lastName, judgeTournamentDTO);  // Add to map if exists
+                map.put(judgeId, judgeTournamentDTO);  // Add to map if exists
             } else {
-                judgeTournamentDTO = new JudgeTournamentDTO(firstName, lastName, "", tournaments, "");
-                map.put(firstName + " " + lastName, judgeTournamentDTO);  // Add to map if new
+                judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", tournaments, "");
+                map.put(judgeId, judgeTournamentDTO);  // Add to map if new
             }
         }
         return new ArrayList<>(map.values());
     }
 
 
-    public HashMap<String, Integer> getRoundCount() {
-        HashMap<String, Integer> map = new HashMap<>();
+    public List<JudgeRoundStatDTO> getRoundCount() {
+        HashMap<Long, JudgeRoundStatDTO> map = new HashMap<>();
         List<JudgeTournamentDTO> temp = getJudgesByTournamentWithRounds();
-
         for (JudgeTournamentDTO judgeTournamentDTO : temp) {
-            String key = (judgeTournamentDTO.getFirstName() + " " + judgeTournamentDTO.getLastName()).trim();
-            map.merge(key, judgeTournamentDTO.getRounds().size(), Integer::sum);
+            Long key = judgeTournamentDTO.getId();
+            Integer value = judgeTournamentDTO.getRounds().size();
+            if (map.containsKey(key)) {
+                map.put(key, new JudgeRoundStatDTO(judgeTournamentDTO.getFirstName(), judgeTournamentDTO.getLastName(), judgeTournamentDTO.getId(), map.get(key).getRoundsJudged() + value));
+            } else {
+                map.put(key, new JudgeRoundStatDTO(judgeTournamentDTO.getFirstName(), judgeTournamentDTO.getLastName(), judgeTournamentDTO.getId(), value));
+            }
         }
-
-        return map;
+        return  new ArrayList<>(map.values());
     }
 
-
+//    },
+//    {
+//        "id": 149,
+//        "firstName": "Ahmedh",
+//        "lastName": "Moulana",
+//        "tournamentShortName": "SLSDC 2024 E",
+//        "phone": "",
+//        "rounds": [
+//            "Round 1"
+//        ]
+//    },
+//    {
+//        "id": 31,
+//        "firstName": "Rusira",
+//        "lastName": "Ekanayake",
+//        "tournamentShortName": "NMPs 2024",
+//        "phone": "",
+//        "rounds": [
+//            "Round 2",
+//            "Round 3",
+//            "Round 4",
+//            "Round 5",
+//            "Quarterfinals"
+//        ]
+//    },
+//    {
 }

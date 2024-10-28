@@ -1,10 +1,11 @@
 package com.dineth.debateTracker.judge;
+
+import com.dineth.debateTracker.dtos.JudgeRoundStatDTO;
 import com.dineth.debateTracker.dtos.JudgeTournamentDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
 
 @RestController @Slf4j
@@ -39,8 +40,8 @@ public class JudgeController {
         return judgeService.getJudgesByTournament();
     }
     @GetMapping(path = "stats/rounds")
-    public List<Object> getRoundCount() {
-        return Collections.singletonList(judgeService.getRoundCount());
+    public List<JudgeRoundStatDTO> getRoundCount() {
+        return judgeService.getRoundCount();
     }
 
     @PostMapping
