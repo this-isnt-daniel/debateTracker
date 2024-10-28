@@ -1,6 +1,7 @@
 package com.dineth.debateTracker.debate;
 
 import com.dineth.debateTracker.ballot.Ballot;
+import com.dineth.debateTracker.eliminationballot.EliminationBallot;
 import com.dineth.debateTracker.feedback.Feedback;
 import com.dineth.debateTracker.motion.Motion;
 import com.dineth.debateTracker.team.Team;
@@ -26,6 +27,8 @@ public class Debate implements Serializable {
     private Team winner;
     @OneToMany @JoinColumn(name = "debate_id")
     private List<Ballot> ballots;
+    @OneToMany @JoinColumn(name = "debate_id")
+    private List<EliminationBallot> eliminationBallots;
     @ManyToOne @JoinColumn(name = "motion_id")
     private Motion motion;
     @OneToMany

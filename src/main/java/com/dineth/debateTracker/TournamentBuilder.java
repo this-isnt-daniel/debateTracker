@@ -9,6 +9,8 @@ import com.dineth.debateTracker.debate.DebateService;
 import com.dineth.debateTracker.debater.Debater;
 import com.dineth.debateTracker.debater.DebaterService;
 import com.dineth.debateTracker.dtos.*;
+import com.dineth.debateTracker.eliminationballot.EliminationBallot;
+import com.dineth.debateTracker.eliminationballot.EliminationBallotService;
 import com.dineth.debateTracker.feedback.Feedback;
 import com.dineth.debateTracker.feedback.FeedbackService;
 import com.dineth.debateTracker.institution.Institution;
@@ -58,10 +60,11 @@ public class TournamentBuilder {
     private final BallotService ballotService;
     private final RoundService roundService;
     private final FeedbackService feedbackService;
+    private final EliminationBallotService eliminationBallotService;
 
 
     @Autowired
-    public TournamentBuilder(JudgeService judgeService, TeamService teamService, DebaterService debaterService, DebateService debateService, InstitutionService institutionService, MotionService motionService, TournamentService tournamentService, BreakCategoryService breakCategoryService, BallotService ballotService, RoundService roundService, FeedbackService feedbackService) {
+    public TournamentBuilder(JudgeService judgeService, TeamService teamService, DebaterService debaterService, DebateService debateService, InstitutionService institutionService, MotionService motionService, TournamentService tournamentService, BreakCategoryService breakCategoryService, BallotService ballotService, RoundService roundService, FeedbackService feedbackService, EliminationBallotService eliminationBallotService) {
         this.judgeService = judgeService;
         this.teamService = teamService;
         this.debaterService = debaterService;
@@ -73,6 +76,7 @@ public class TournamentBuilder {
         this.ballotService = ballotService;
         this.roundService = roundService;
         this.feedbackService = feedbackService;
+        this.eliminationBallotService = eliminationBallotService;
     }
 
 
@@ -223,11 +227,6 @@ public class TournamentBuilder {
             }
             try {
                 for (RoundDTO roundDTO : roundsDTOs) {
-                    //For now, ignore elimination rounds
-                    if (roundDTO.isElimination()) {
-                        continue;
-                    }
-
                     Round round = new Round(roundDTO.getName(), null, roundDTO.isElimination());
                     round = roundService.addRound(round);
                     roundDTO.setDbId(round.getId());
@@ -264,6 +263,32 @@ public class TournamentBuilder {
                                 System.out.println("Ballot count mismatch");
                                 continue;
                             }
+                            // check if elimination debate
+                            List<EliminationBallot> eliminationBallots = new ArrayList<>();
+                            if (roundDTO.isElimination()) {
+                                try {
+                                    Team tempTeam1 = teamService.findTeamById(teamDTOMap.get(debateDTO.getSides().get(0).getTeamId()).getDbId());
+                                    Team tempTeam2 = teamService.findTeamById(teamDTOMap.get(debateDTO.getSides().get(1).getTeamId()).getDbId());
+                                    for (SideDTO sideDTO : debateDTO.getSides()) {
+                                        Team currentTeam = teamService.findTeamById(teamDTOMap.get(sideDTO.getTeamId()).getDbId());
+                                        for (FinalTeamBallotDTO finalTeamBallotDTO : sideDTO.getFinalTeamBallots()) {
+                                            String judgeId = finalTeamBallotDTO.getAdjudicatorIds().get(0);
+                                            Judge judge = judgeService.findJudgeById(judgeDTOMap.get(judgeId).getDbId());
+                                            if (finalTeamBallotDTO.getRank() == 1 && currentTeam.getId().equals(tempTeam1.getId())) {
+                                                eliminationBallots.add(new EliminationBallot(judge, tempTeam1, tempTeam2));
+                                            } else if (finalTeamBallotDTO.getRank() == 1 && currentTeam.getId().equals(tempTeam2.getId())) {
+                                                eliminationBallots.add(new EliminationBallot(judge, tempTeam2, tempTeam1));
+                                            }
+                                        }
+                                    }
+                                    for (EliminationBallot eliminationBallot : eliminationBallots) {
+                                        eliminationBallotService.addEliminationBallot(eliminationBallot);
+                                    }
+                                } catch (Exception e) {
+                                    log.error("Error in adding elimination ballot : " + e.getMessage());
+                                }
+
+                            }
                             //check if ballots are ignored
                             List<String> ignoredBallotAdjIds = new ArrayList<>();
                             List<FinalTeamBallotDTO> adjBallots = debateDTO.getSides().get(0).getFinalTeamBallots();
@@ -276,29 +301,32 @@ public class TournamentBuilder {
 
                             try {
                                 List<Ballot> ballots = new ArrayList<>();
-                                for (SideDTO sideDTO : debateDTO.getSides()) {
-                                    for (SpeechDTO speechDTO : sideDTO.getSpeeches()) {
-                                        for (IndividualSpeechBallotDTO individualSpeechBallotDTO : speechDTO.getIndividualSpeechBallots()) {
-                                            String judgeId = individualSpeechBallotDTO.getAdjudicatorId();
-                                            String debaterId = speechDTO.getSpeakerId();
-                                            double score = individualSpeechBallotDTO.getScore();
+                                if (!roundDTO.isElimination()) {
+                                    for (SideDTO sideDTO : debateDTO.getSides()) {
+                                        for (SpeechDTO speechDTO : sideDTO.getSpeeches()) {
+                                            for (IndividualSpeechBallotDTO individualSpeechBallotDTO : speechDTO.getIndividualSpeechBallots()) {
+                                                String judgeId = individualSpeechBallotDTO.getAdjudicatorId();
+                                                String debaterId = speechDTO.getSpeakerId();
+                                                double score = individualSpeechBallotDTO.getScore();
 
-                                            if (ignoredBallotAdjIds.contains(judgeId)) {
-                                                continue;
-                                            }
-                                            Judge judge = judgeService.findJudgeById(judgeDTOMap.get(judgeId).getDbId());
-                                            Debater debater = debaterService.findDebaterById(debaterDTOMap.get(debaterId).getDbId());
-                                            if (judge != null && debater != null) {
-                                                Ballot ballot = new Ballot(judge, debater, (float) score);
-                                                ballotService.addBallot(ballot);
-                                                ballots.add(ballot);
+                                                if (ignoredBallotAdjIds.contains(judgeId)) {
+                                                    continue;
+                                                }
+                                                Judge judge = judgeService.findJudgeById(judgeDTOMap.get(judgeId).getDbId());
+                                                Debater debater = debaterService.findDebaterById(debaterDTOMap.get(debaterId).getDbId());
+                                                if (judge != null && debater != null) {
+                                                    Ballot ballot = new Ballot(judge, debater, (float) score);
+                                                    ballotService.addBallot(ballot);
+                                                    ballots.add(ballot);
+                                                }
                                             }
                                         }
                                     }
                                 }
 
-
-                                Debate debate = new Debate(prop, opp, null, ballots, motion);
+                                //if it is an elimination round
+                                Debate debate = new Debate(prop, opp, null, null, motion);
+                                debate.setEliminationBallots(eliminationBallots);
                                 debate = debateService.addDebate(debate);
                                 roundService.addDebateToRound(round.getId(), debate);
                             } catch (Exception e) {
@@ -337,7 +365,7 @@ public class TournamentBuilder {
                             Feedback feedback = new Feedback(judge, overallRating, clashEvaluation, clashOrganization, trackingArguments, agree, comments);
                             if (sourceTeam != null) {
                                 feedback.setSourceTeam(sourceTeam);
-                            } else if (sourceJudge != null){
+                            } else if (sourceJudge != null) {
                                 feedback.setSourceJudge(sourceJudge);
                             }
 //                            feedbackService.addFeedback(feedback);
