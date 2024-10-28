@@ -36,8 +36,4 @@ public interface JudgeRepository extends JpaRepository<Judge, Long> {
             nativeQuery = true)
     List<Object[]> getJudgesByTournament();
 
-
-
-
-
 }
