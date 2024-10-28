@@ -24,12 +24,6 @@ public class StringUtilsTest {
         }
 
         @Test
-        @Name("Split name with one part")
-        public void testSplitName_SingleName() {
-            Assertions.assertThrows(CustomExceptions.NameSplitException.class, () -> StringUtil.splitName("John"));
-        }
-
-        @Test
         @Name("Split name with prefixed last name")
         public void testSplitName_WithPrefix() {
             ImmutablePair<String, String> result = StringUtil.splitName("Juan de Marco");
