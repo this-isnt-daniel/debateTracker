@@ -19,6 +19,19 @@ public class InstitutionService {
     public List<Institution> getInstitutions() {
         return institutionRepository.findAll();
     }
+    public Institution findInstitutionByName(String name) {
+//        turn to lowercase, strip spaces and special characters
+        List<String> similarNames = getInstitutionsWithSimilarNames(name);
+        name = name.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+        for (String s : similarNames) {
+            String[] parts = s.split(",");
+            String temp = parts[1].toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+            if (temp.equals(name)) {
+                return institutionRepository.findById(Long.parseLong(parts[0])).orElse(null);
+            }
+        }
+        return null;
+    }
 
     public Institution findInstitutionById(Long id) {
         return institutionRepository.findById(id).orElse(null);

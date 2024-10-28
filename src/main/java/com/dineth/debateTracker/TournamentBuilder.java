@@ -149,9 +149,17 @@ public class TournamentBuilder {
 
             try {
                 for (InstitutionDTO institutionDTO : institutionDTOs) {
-                    Institution institution = new Institution(institutionDTO.name, institutionDTO.reference);
-                    institution = institutionService.addInstitution(institution);
-                    institutionDTO.dbId = institution.getId();
+                    //  check if institution exists
+                    Institution tempInstitution = institutionService.findInstitutionByName(institutionDTO.name.strip());
+                    if (tempInstitution == null) {
+                        log.debug("Adding institution : " + institutionDTO.name);
+                        Institution institution = new Institution(institutionDTO.name.strip(), institutionDTO.reference);
+                        institution = institutionService.addInstitution(institution);
+                        institutionDTO.dbId = institution.getId();
+                    } else {
+                        log.debug("Institution already exists : " + institutionDTO.name);
+                        institutionDTO.dbId = tempInstitution.getId();
+                    }
                 }
             } catch (Exception e) {
                 log.error("Error in adding institution : " + e.getMessage());
