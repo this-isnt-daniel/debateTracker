@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController @Slf4j
@@ -36,6 +37,10 @@ public class JudgeController {
     @GetMapping(path = "tournaments")
     public List<JudgeTournamentDTO> getJudgesByTournament() {
         return judgeService.getJudgesByTournament();
+    }
+    @GetMapping(path = "stats/rounds")
+    public List<Object> getRoundCount() {
+        return Collections.singletonList(judgeService.getRoundCount());
     }
 
     @PostMapping
