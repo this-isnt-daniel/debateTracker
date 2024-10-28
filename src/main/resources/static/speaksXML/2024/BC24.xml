@@ -1893,7 +1893,7 @@
                      institutions="I13"/>
         <adjudicator id="A161" name="Chathuka Induwara" core="false" independent="false" score="2.5"
                      institutions="I11"/>
-        <adjudicator id="A171" name="Shenaya" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A171" name="Shenaya Rodrigo" core="false" independent="false" score="2.5"/>
         <adjudicator id="A87" name="Gimhan Sooriyabandara" core="false" independent="false" score="2.5"
                      institutions="I19"/>
         <adjudicator id="A88" name="Rachel Cramer" core="false" independent="false" score="2.5" institutions="I1"/>
@@ -1917,7 +1917,7 @@
         <adjudicator id="A117" name="Shruthika Prathapan" core="false" independent="false" score="2.5"
                      institutions="I4"/>
         <adjudicator id="A118" name="Daniel Victor" core="false" independent="false" score="4.5" institutions="I6"/>
-        <adjudicator id="A172" name="Lara" core="false" independent="false" score="2.5" institutions="I4"/>
+        <adjudicator id="A172" name="Lara Jayasiri" core="false" independent="false" score="2.5" institutions="I4"/>
         <adjudicator id="A162" name="Sameesha Dissanayake" core="false" independent="false" score="2.5"/>
         <adjudicator id="A173" name="Janul De Silva" core="false" independent="false" score="2.5" institutions="I8"/>
         <adjudicator id="A164" name="Ranudi Jayasinghe" core="false" independent="false" score="2.5"/>

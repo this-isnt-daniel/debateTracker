@@ -3922,7 +3922,7 @@
                 <answer question="Q2">The adjudication was valuable .</answer>
             </feedback>
         </adjudicator>
-        <adjudicator id="A214" name="Dinuka" core="false" independent="false" score="5.0">
+        <adjudicator id="A214" name="Dinuka Wickramasinghe" core="false" independent="false" score="5.0">
             <feedback score="5.0" source-team="T33" debate="D93">
                 <answer question="Q1">True</answer>
             </feedback>
