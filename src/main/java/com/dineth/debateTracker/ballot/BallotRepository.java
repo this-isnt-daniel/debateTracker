@@ -47,5 +47,12 @@ public interface BallotRepository extends JpaRepository<Ballot, Long> {
     List<Object[]> getRankedDebaters(String firstName, String lastName);
 
 
-
+    @Query(value = "SELECT j.fname, j.lname, array_agg(b.speaker_score) AS scores, AVG(b.speaker_score) AS avg_score, COUNT(b.speaker_score) AS rounds_judged " +
+            "FROM ballot b " +
+            "JOIN judge j ON b.judge_id = j.id " +
+            "WHERE b.speaker_score > 40.5 " +
+            "GROUP BY j.fname, j.lname " +
+            "ORDER BY avg_score DESC",
+            nativeQuery = true)
+    List<Object[]> getRankedJudgesBySpeaks();
 }
