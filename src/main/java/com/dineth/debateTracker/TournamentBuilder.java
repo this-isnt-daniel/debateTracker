@@ -104,6 +104,7 @@ public class TournamentBuilder {
 
         for (String fileName : fileNames) {
             buildMyTournament("src/main/resources/static/speaksXML/2024/" + fileName);
+            log.info("Built tournament : " + fileName);
         }
         return "Done";
     }

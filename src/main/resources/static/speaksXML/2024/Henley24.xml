@@ -2322,7 +2322,7 @@
     <institution id="I20" reference="BC">Bishop's College</institution>
     <institution id="I21" reference="DRCK">Dharmaraja College Kandy</institution>
     <institution id="I19" reference="DS">D. S. Senanayake College</institution>
-    <institution id="I35" reference="MOIR">Elizabeth Moir</institution>
+    <institution id="I35" reference="MOIR">Elizabeth Moir School</institution>
     <institution id="I34" reference="GCC">Gateway College Colombo</institution>
     <institution id="I18" reference="GCD">Gateway College Dehiwala</institution>
     <institution id="I38" reference="KGHS">Girls' High School Kandy</institution>
@@ -2334,12 +2334,12 @@
     <institution id="I16" reference="RC">Royal College</institution>
     <institution id="I36" reference="SMV">Saiva Mangaiyar Vidyalayam</institution>
     <institution id="I28" reference="SJC">St. Joseph's College Colombo 10</institution>
-    <institution id="I25" reference="STC">St. Thomas' College Mount Lavinia</institution>
+    <institution id="I25" reference="STC">S.Thomas' College Mount Lavinia</institution>
     <institution id="I32" reference="SVN">Sujatha Vidyalaya Nugegoda</institution>
     <institution id="I15" reference="TCK">Trinity College Kandy</institution>
     <institution id="I29" reference="VV">Visakha Vidyalaya</institution>
     <institution id="I22" reference="WC">Wesley College</institution>
-    <institution id="I30" reference="WIS">Wycherley International School</institution>
+    <institution id="I30" reference="WIS">Wycherley International School Colombo</institution>
     <motion id="M43" reference="R1">THBT parents should teach their children that the world is fair</motion>
     <motion id="M44" reference="R2">THBT the LGBTQ+ movement should emphasise family values as a part of their activism,
         rather than adopting the view that family values do not matter

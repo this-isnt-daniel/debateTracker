@@ -3643,18 +3643,18 @@
     </participants>
     <break-category id="BC1">Open</break-category>
     <institution id="I1" reference="ABV">Ananda Balika Vidyalaya</institution>
-    <institution id="I2" reference="AV">Anula Vidyalaya</institution>
+    <institution id="I2" reference="AV">Anula Vidyalaya Nugegoda</institution>
     <institution id="I3" reference="AIS">Asian International School</institution>
     <institution id="I4" reference="BC">Bishop&#8217;s College</institution>
     <institution id="I5" reference="CIS">Colombo International School</institution>
     <institution id="I6" reference="DIS">Daybridge International School</institution>
-    <institution id="I7" reference="DRCK">Dharmaraja College</institution>
+    <institution id="I7" reference="DRCK">Dharmaraja College Kandy</institution>
     <institution id="I8" reference="DS">D. S. Senanayake College</institution>
     <institution id="I9" reference="Moir">Elizabeth Moir School</institution>
-    <institution id="I10" reference="GCD">Gateway College</institution>
+    <institution id="I10" reference="GCD">Gateway College Dehiwala</institution>
     <institution id="I11" reference="HIS">Hejaaz International School</institution>
-    <institution id="I12" reference="HCM">Highlands College</institution>
-    <institution id="I13" reference="HCK">Hillwood College</institution>
+    <institution id="I12" reference="HCM">Highlands College Maharagama</institution>
+    <institution id="I13" reference="HCK">Hillwood College Kandy</institution>
     <institution id="I14" reference="HFC">Holy Family Convent</institution>
     <institution id="I15" reference="IIGS">Ilma International Girls&#8217; School</institution>
     <institution id="I16" reference="IC">Isipathana College</institution>
@@ -3664,15 +3664,15 @@
     <institution id="I20" reference="RC">Royal College</institution>
     <institution id="I21" reference="SMV">Saiva Mangaiyar Vidyalayam</institution>
     <institution id="I22" reference="SSCP">Sri Sumangala College</institution>
-    <institution id="I23" reference="SACK">St. Anthony's College</institution>
+    <institution id="I23" reference="SACK">St. Anthony's College Kandy</institution>
     <institution id="I24" reference="SBC">St. Bridget's Convent</institution>
-    <institution id="I25" reference="STC">S. Thomas&#8217; College</institution>
+    <institution id="I25" reference="STC">S.Thomas' College Mount Lavinia</institution>
     <institution id="I26" reference="SPC">St. Peters College</institution>
-    <institution id="I27" reference="SV">Sujatha Vidyalaya</institution>
-    <institution id="I28" reference="TCK">Trinity College</institution>
+    <institution id="I27" reference="SV">Sujatha Vidyalaya Nugegoda</institution>
+    <institution id="I28" reference="TCK">Trinity College Kandy</institution>
     <institution id="I29" reference="VV">Visakha Vidyalaya</institution>
     <institution id="I30" reference="WC">Wesley College</institution>
-    <institution id="I31" reference="WIS">Wycherley International School</institution>
+    <institution id="I31" reference="WIS">Wycherley International School Colombo</institution>
     <motion id="M1" reference="restrictions on retail chains">This house would impose restrictions (entry taxes, quotas)
         on the opening of stores by large retail chains in developing&#160;countries
     </motion>

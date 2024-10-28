@@ -2817,7 +2817,7 @@
         <adjudicator id="A159" name="Nevan" core="false" independent="false" score="0.0"/>
     </participants>
     <break-category id="BC1">Open</break-category>
-    <institution id="I18" reference="AV">Anula Vidyalaya</institution>
+    <institution id="I18" reference="AV">Anula Vidyalaya Nugegoda</institution>
     <institution id="I4" reference="BC">Bishop&#8217;s College</institution>
     <institution id="I6" reference="CIS">Colombo International School</institution>
     <institution id="I15" reference="DIS">Daybridge International School</institution>
@@ -2826,7 +2826,7 @@
     <institution id="I17" reference="GCC">Gateway College Colombo</institution>
     <institution id="I14" reference="GCD">Gateway College Dehiwala</institution>
     <institution id="I9" reference="HCM">Highlands College Maharagama</institution>
-    <institution id="I5" reference="HCK">Hillwood College</institution>
+    <institution id="I5" reference="HCK">Hillwood College Kandy</institution>
     <institution id="I23" reference="IC">Isipathana College</institution>
     <institution id="I11" reference="LC">Ladies' College</institution>
     <institution id="I20" reference="LISW">Lyceum International School Wattala</institution>
@@ -2836,8 +2836,8 @@
     <institution id="I13" reference="SMV">Saiva Mangaiyar Vidyalayam</institution>
     <institution id="I21" reference="SIS">Stafford International School</institution>
     <institution id="I1" reference="SBC">St. Bridget's Convent</institution>
-    <institution id="I19" reference="STC">S.Thomas&#8217; College Mt. Lavinia</institution>
-    <institution id="I12" reference="SV">Sujatha Vidyalaya</institution>
+    <institution id="I19" reference="STC">S.Thomas' College Mount Lavinia</institution>
+    <institution id="I12" reference="SV">Sujatha Vidyalaya Nugegoda</institution>
     <institution id="I16" reference="BSC">The British School in Colombo</institution>
     <institution id="I24" reference="TCK">Trinity College Kandy</institution>
     <institution id="I8" reference="WC">Wesley College</institution>

@@ -7274,13 +7274,13 @@
         <adjudicator id="A227" name="Imaadh Ifthikar" core="false" independent="false" score="2.5"/>
     </participants>
     <break-category id="BC1">Open</break-category>
-    <institution id="I14" reference="AV">Anula Vidyalaya</institution>
+    <institution id="I14" reference="AV">Anula Vidyalaya Nugegoda</institution>
     <institution id="I26" reference="AIS">Asian International School</institution>
     <institution id="I27" reference="BC">Bishop&#8217;s College</institution>
     <institution id="I15" reference="CIS">Colombo International School</institution>
     <institution id="I33" reference="DCK">Dharmaraja College Kandy</institution>
     <institution id="I4" reference="DS">D.S Senanayake College</institution>
-    <institution id="I13" reference="EI">&#201;cole Internationale</institution>
+    <institution id="I13" reference="EI">Ecole Internationale Kandy</institution>
     <institution id="I30" reference="Moir">Elizabeth Moir School</institution>
     <institution id="I24" reference="GCC">Gateway College Colombo</institution>
     <institution id="I12" reference="GCD">Gateway College Dehiwala</institution>
@@ -7288,7 +7288,7 @@
     <institution id="I6" reference="HIS">Hejaaz International School</institution>
     <institution id="I34" reference="HCM">Highlands College Maharagama</institution>
     <institution id="I11" reference="HCK">Hillwood College Kandy</institution>
-    <institution id="I2" reference="HFC">Holy Family Convent Bambalapitiya</institution>
+    <institution id="I2" reference="HFC">Holy Family Convent</institution>
     <institution id="I22" reference="Ilma">Ilma International Girls' School</institution>
     <institution id="I19" reference="IC">Isipathana College</institution>
     <institution id="I3" reference="JHC">Jaffna Hindu College</institution>
@@ -7305,7 +7305,7 @@
     <institution id="I5" reference="SACG">St. Aloysius' College Galle</institution>
     <institution id="I36" reference="Anthony's">St. Anthony's College Kandy</institution>
     <institution id="I21" reference="SBC">St.Bridget's Convent</institution>
-    <institution id="I25" reference="STC">S.Thomas&#8217; College</institution>
+    <institution id="I25" reference="STC">S.Thomas' College Mount Lavinia</institution>
     <institution id="I28" reference="STC Prep">S. Thomas' Preparatory School</institution>
     <institution id="I29" reference="TCK">Trinity College Kandy</institution>
     <institution id="I31" reference="VV">Visakha Vidyalaya</institution>
