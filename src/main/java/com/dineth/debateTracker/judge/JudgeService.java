@@ -32,8 +32,8 @@ public class JudgeService {
         return judgeRepository.findByFnameAndLname(judge.getFname(), judge.getLname());
     }
 
-    public List<JudgeTournamentDTO> getJudgesByTournament() {
-        List<Object[]> temp = judgeRepository.getJudgesByTournament();
+    public List<JudgeTournamentDTO> getJudgesByTournamentWithRounds() {
+        List<Object[]> temp = judgeRepository.getJudgesByTournamentWithRounds();
         List<JudgeTournamentDTO> result = new ArrayList<>();
         for (Object[] obj : temp) {
             String firstName = (String) obj[0];
@@ -43,6 +43,20 @@ public class JudgeService {
             String tournamentShortName = (String) obj[3];
 
             JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(firstName, lastName, "", rounds, tournamentShortName);
+            result.add(judgeTournamentDTO);
+        }
+        return result;
+    }
+    public List<JudgeTournamentDTO> getJudgesByTournament(){
+        List<Object[]> temp = judgeRepository.getJudgesByTournament();
+        List<JudgeTournamentDTO> result = new ArrayList<>();
+        for (Object[] obj : temp) {
+            String firstName = (String) obj[0];
+            String lastName = (String) obj[1];
+            String[] tournamentArray = (String[]) obj[2];  // Cast to String[]
+            List<String> tournaments = Arrays.asList(tournamentArray);  // Convert to List<String>
+
+            JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(firstName, lastName, "", tournaments, "");
             result.add(judgeTournamentDTO);
         }
         return result;

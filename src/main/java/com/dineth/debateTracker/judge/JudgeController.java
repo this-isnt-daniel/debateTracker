@@ -1,5 +1,4 @@
 package com.dineth.debateTracker.judge;
-
 import com.dineth.debateTracker.dtos.JudgeTournamentDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +24,14 @@ public class JudgeController {
 
     /**
      * Get all judges and the rounds they've judged in each tournament
+     */
+    @GetMapping(path = "tournament-rounds")
+    public List<JudgeTournamentDTO> getJudgesByTournamentWithRounds() {
+        return judgeService.getJudgesByTournamentWithRounds();
+    }
+
+    /**
+     * Get all judges and the tournaments they've judged at
      */
     @GetMapping(path = "tournaments")
     public List<JudgeTournamentDTO> getJudgesByTournament() {
