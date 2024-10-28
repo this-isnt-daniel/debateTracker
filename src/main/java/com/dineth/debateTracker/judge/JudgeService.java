@@ -111,13 +111,17 @@ public class JudgeService {
     }
 
 
-    public List<HashMap<String,Integer>> getRoundCount() {
+    public HashMap<String, Integer> getRoundCount() {
         HashMap<String, Integer> map = new HashMap<>();
         List<JudgeTournamentDTO> temp = getJudgesByTournamentWithRounds();
+
         for (JudgeTournamentDTO judgeTournamentDTO : temp) {
-            String key = judgeTournamentDTO.getFirstName() + " " + judgeTournamentDTO.getLastName();
+            String key = (judgeTournamentDTO.getFirstName() + " " + judgeTournamentDTO.getLastName()).trim();
             map.merge(key, judgeTournamentDTO.getRounds().size(), Integer::sum);
         }
-        return Collections.singletonList(map);
+
+        return map;
     }
+
+
 }
