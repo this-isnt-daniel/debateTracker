@@ -2,6 +2,7 @@ package com.dineth.debateTracker.debate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -22,6 +23,10 @@ public class DebateService {
     }
     public Debate addDebate(Debate debate) {
         return debateRepository.save(debate);
+    }
+
+    public List<Debate> findDebatesByDebaterId(Long debaterId) {
+        return debateRepository.findDebatesByDebaterId(debaterId);
     }
 
 
