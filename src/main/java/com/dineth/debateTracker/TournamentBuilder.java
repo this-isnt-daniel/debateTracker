@@ -339,8 +339,57 @@ public class TournamentBuilder {
                                 if (roundDTO.isElimination()) {
                                     debate = new Debate(prop, opp, null, null, motion);
                                     debate.setEliminationBallots(eliminationBallots);
+//                                    Check winner
+                                    if (eliminationBallots.size() ==1 ) {
+                                        Team winner = eliminationBallots.get(0).getWinner();
+                                        debate.setWinner(winner);
+                                    } else{
+                                        List<Team> propVotes = new ArrayList<>();
+                                        List<Team> oppVotes = new ArrayList<>();
+                                        for (EliminationBallot eliminationBallot : eliminationBallots) {
+                                            if (eliminationBallot.getWinner().equals(prop)) {
+                                                propVotes.add(prop);
+                                            } else {
+                                                oppVotes.add(opp);
+                                            }
+                                        }
+                                        if (propVotes.size() > oppVotes.size()) {
+                                            debate.setWinner(prop);
+                                        } else {
+                                            debate.setWinner(opp);
+                                        }
+                                    }
+
                                 } else {
                                     debate = new Debate(prop, opp, null, ballots, motion);
+                                    String side0TeamId = debateDTO.getSides().get(0).getTeamId();
+                                    String side1TeamId = debateDTO.getSides().get(1).getTeamId();
+                                    Team side0Team = teamService.findTeamById(teamDTOMap.get(side0TeamId).getDbId());
+                                    Team side1Team = teamService.findTeamById(teamDTOMap.get(side1TeamId).getDbId());
+                                    List<Integer> side0Votes = new ArrayList<>();
+                                    List<Integer> side1Votes = new ArrayList<>();
+                                    for (FinalTeamBallotDTO finalTeamBallotDTO : debateDTO.getSides().get(0).getFinalTeamBallots()) {
+                                        if (finalTeamBallotDTO.getRank() == 1) {
+                                            side0Votes.add(1);
+                                        } else {
+                                            side0Votes.add(0);
+                                        }
+                                    }
+                                    for (FinalTeamBallotDTO finalTeamBallotDTO : debateDTO.getSides().get(1).getFinalTeamBallots()) {
+                                        if (finalTeamBallotDTO.getRank() == 1) {
+                                            side1Votes.add(1);
+                                        } else {
+                                            side1Votes.add(0);
+                                        }
+                                    }
+                                    int side0Sum = side0Votes.stream().mapToInt(Integer::intValue).sum();
+                                    int side1Sum = side1Votes.stream().mapToInt(Integer::intValue).sum();
+                                    if (side0Sum > side1Sum) {
+                                        debate.setWinner(side0Team);
+                                    } else if (side0Sum < side1Sum) {
+                                        debate.setWinner(side1Team);
+                                    }
+
                                 }
                                 debate = debateService.addDebate(debate);
                                 roundService.addDebateToRound(round.getId(), debate);
