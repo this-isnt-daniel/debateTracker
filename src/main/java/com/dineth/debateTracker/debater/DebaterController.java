@@ -3,6 +3,7 @@ package com.dineth.debateTracker.debater;
 import com.dineth.debateTracker.ballot.Ballot;
 import com.dineth.debateTracker.ballot.BallotService;
 import com.dineth.debateTracker.debate.DebateService;
+import com.dineth.debateTracker.dtos.WinLossStatDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -78,23 +79,16 @@ public class DebaterController {
     }
 
     @GetMapping(path = "stats")
-    public Map<Debater, Object> getDebaterStats() {
-        Map<Debater, Object> temp = debateService.getWinLossStats();
-        Map<Debater, Object> debaterStats = new HashMap<>();
-        for (Map.Entry<Debater, Object> entry : temp.entrySet()) {
+    public Map<Debater, WinLossStatDTO> getDebaterStats() {
+        Map<Debater, WinLossStatDTO> temp = debateService.getWinLossStats();
+        Map<Debater, WinLossStatDTO> stats = new HashMap<>();
+        for (Map.Entry<Debater, WinLossStatDTO> entry : temp.entrySet()) {
             Debater debater = entry.getKey();
-            Map<String, Integer> stats = (Map<String, Integer>) entry.getValue();
-            int wins = stats.get("wins");
-            int losses = stats.get("losses");
-            int total = wins + losses;
-            float winPercentage = (float) wins / total;
-            stats.put("total", total);
-            stats.put("winPercentage", (int) (winPercentage * 100));
-            debaterStats.put(debater, stats);
+            WinLossStatDTO stat = entry.getValue();
+            stat.setWinPercentage(stat.getWinPercentage());
+            stats.put(debater, stat);
         }
-        return debaterStats;
-
-
+        return stats;
     }
 
 

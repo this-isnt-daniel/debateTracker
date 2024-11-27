@@ -2,6 +2,7 @@ package com.dineth.debateTracker.debate;
 
 import com.dineth.debateTracker.ballot.Ballot;
 import com.dineth.debateTracker.debater.Debater;
+import com.dineth.debateTracker.dtos.WinLossStatDTO;
 import com.dineth.debateTracker.team.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -117,44 +118,36 @@ public class DebateService {
         return headToHead;
     }
 
-    public Map<Debater, Object> getWinLossStats() {
-        Map<Debater, Map<Debater, Integer>> data = calculateHeadToHeadScore();
-        Map<Debater, Object> winLossStats = new HashMap<>();
-
-        // Prepare a map to store total wins and losses for each debater
-        Map<Debater, Integer> wins = new HashMap<>();
-        Map<Debater, Integer> losses = new HashMap<>();
-
-        // Count wins from the head-to-head map
-        for (Map.Entry<Debater, Map<Debater, Integer>> entry : data.entrySet()) {
-            Debater debater = entry.getKey();
-            wins.putIfAbsent(debater, 0); // Initialize wins if debater is not already in map
-            losses.putIfAbsent(debater, 0); // Initialize losses if debater is not already in map
-            for (Map.Entry<Debater, Integer> opponentEntry : entry.getValue().entrySet()) {
-                wins.put(debater, wins.get(debater) + opponentEntry.getValue());
+    public Map<Debater, WinLossStatDTO> getWinLossStats() {
+        Map<Debater, WinLossStatDTO> winLossStats = new HashMap<>();
+        List<Debate> debates = debateRepository.findAll();
+        for (Debate debate : debates) {
+            Team winner = debate.getWinner();
+            if (winner == null) {
+                continue; // Skip debates without a winner
             }
-        }
 
-        // Count losses by inspecting where the current debater is listed as the opponent
-        for (Map.Entry<Debater, Map<Debater, Integer>> entry : data.entrySet()) {
-            for (Map.Entry<Debater, Integer> innerEntry : entry.getValue().entrySet()) {
-                Debater debater = innerEntry.getKey();
-                losses.putIfAbsent(debater, 0); // Initialize losses if debater is not already in map
-                losses.put(debater, losses.get(debater) + innerEntry.getValue());
+            List<Team> teams = findDebatersSpeakingInDebate(debate);
+            List<Debater> winners = winner.equals(teams.get(0)) ? teams.get(0).getDebaters() : teams.get(1).getDebaters();
+            List<Debater> losers = winner.equals(teams.get(0)) ? teams.get(1).getDebaters() : teams.get(0).getDebaters();
+            for (Debater winnerDebater : winners) {
+                if (winLossStats.containsKey(winnerDebater)) {
+                    winLossStats.put(winnerDebater, new WinLossStatDTO(winLossStats.get(winnerDebater).getWins() + 1, winLossStats.get(winnerDebater).getLosses()));
+                } else {
+                    winLossStats.put(winnerDebater, new WinLossStatDTO(1, 0));
+                }
             }
-        }
+            for (Debater loserDebater : losers) {
+                if (winLossStats.containsKey(loserDebater)) {
+                    winLossStats.put(loserDebater, new WinLossStatDTO(winLossStats.get(loserDebater).getWins(), winLossStats.get(loserDebater).getLosses() + 1));
+                } else {
+                    winLossStats.put(loserDebater, new WinLossStatDTO(0, 1));
+                }
+            }
 
-        // Populate the result map with win/loss stats
-        for (Debater debater : wins.keySet()) {
-            Map<String, Integer> stats = new HashMap<>();
-            stats.put("wins", wins.get(debater));
-            stats.put("losses", losses.get(debater));
-            winLossStats.put(debater, stats);
         }
-
         return winLossStats;
     }
-
 
 
 }
