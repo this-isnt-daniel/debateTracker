@@ -2,11 +2,13 @@ package com.dineth.debateTracker.debater;
 
 import com.dineth.debateTracker.ballot.Ballot;
 import com.dineth.debateTracker.ballot.BallotService;
+import com.dineth.debateTracker.debate.DebateService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,11 +18,13 @@ import java.util.Map;
 public class DebaterController {
     private final DebaterService debaterService;
     private final BallotService ballotService;
+    private final DebateService debateService;
 
     @Autowired
-    public DebaterController(DebaterService debaterService, BallotService ballotService) {
+    public DebaterController(DebaterService debaterService, BallotService ballotService, DebateService debateService) {
         this.debaterService = debaterService;
         this.ballotService = ballotService;
+        this.debateService = debateService;
     }
 
     @GetMapping
@@ -71,6 +75,26 @@ public class DebaterController {
             speaks.add(ballot.getSpeakerScore());
         }
         return speaks;
+    }
+
+    @GetMapping(path = "stats")
+    public Map<Debater, Object> getDebaterStats() {
+        Map<Debater, Object> temp = debateService.getWinLossStats();
+        Map<Debater, Object> debaterStats = new HashMap<>();
+        for (Map.Entry<Debater, Object> entry : temp.entrySet()) {
+            Debater debater = entry.getKey();
+            Map<String, Integer> stats = (Map<String, Integer>) entry.getValue();
+            int wins = stats.get("wins");
+            int losses = stats.get("losses");
+            int total = wins + losses;
+            float winPercentage = (float) wins / total;
+            stats.put("total", total);
+            stats.put("winPercentage", (int) (winPercentage * 100));
+            debaterStats.put(debater, stats);
+        }
+        return debaterStats;
+
+
     }
 
 
