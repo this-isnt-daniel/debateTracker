@@ -357,8 +357,9 @@ public class ParseTabbycatXML {
                     NamedNodeMap attributes = speech.getAttributes();
                     String debaterId = attributes.getNamedItem("speaker").getNodeValue();
                     boolean reply = Boolean.parseBoolean(attributes.getNamedItem("reply").getNodeValue());
+                    Integer speakerPosition = speechDTOs.size() + 1;
                     List<IndividualSpeechBallotDTO> individualSpeechBallotDTOs = getIndividualSpeechBallotDTOs(speech);
-                    speechDTOs.add(new SpeechDTO(debaterId, reply, individualSpeechBallotDTOs));
+                    speechDTOs.add(new SpeechDTO(debaterId, reply, individualSpeechBallotDTOs, speakerPosition));
                 }
             }
             return speechDTOs;

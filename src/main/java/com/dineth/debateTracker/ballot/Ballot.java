@@ -21,6 +21,7 @@ public class Ballot implements Serializable {
     @ManyToOne
     private Debater debater;
     private Float speakerScore;
+    private Integer speakerPosition;
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime createdAt;
     @Temporal(TemporalType.TIMESTAMP)
@@ -35,10 +36,11 @@ public class Ballot implements Serializable {
         updatedAt = LocalDateTime.now();
     }
 
-    public Ballot(Judge judge, Debater debater, Float speakerScore) {
+    public Ballot(Judge judge, Debater debater, Float speakerScore, Integer speakerPosition) {
         this.judge = judge;
         this.debater = debater;
         this.speakerScore = speakerScore;
+        this.speakerPosition = speakerPosition;
     }
 
     @Override
@@ -48,6 +50,7 @@ public class Ballot implements Serializable {
                 ", judge=" + judge +
                 ", debater=" + debater +
                 ", speakerScore=" + speakerScore +
+                ", speakerPosition=" + speakerPosition +
                 '}';
     }
 

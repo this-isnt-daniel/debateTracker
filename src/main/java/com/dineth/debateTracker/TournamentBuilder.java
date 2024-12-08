@@ -327,7 +327,7 @@ public class TournamentBuilder {
                                                 Judge judge = judgeService.findJudgeById(judgeDTOMap.get(judgeId).getDbId());
                                                 Debater debater = debaterService.findDebaterById(debaterDTOMap.get(debaterId).getDbId());
                                                 if (judge != null && debater != null) {
-                                                    Ballot ballot = new Ballot(judge, debater, (float) score);
+                                                    Ballot ballot = new Ballot(judge, debater, (float) score, speechDTO.getSpeakerPosition());
                                                     ballotService.addBallot(ballot);
                                                     ballots.add(ballot);
                                                 }

@@ -14,11 +14,13 @@ public class SpeechDTO {
     private boolean reply;
     private List<IndividualSpeechBallotDTO> individualSpeechBallots;
     private Long dbId;
+    private Integer speakerPosition;
 
-    public SpeechDTO(String speakerId, boolean reply, List<IndividualSpeechBallotDTO> individualSpeechBallots) {
+    public SpeechDTO(String speakerId, boolean reply, List<IndividualSpeechBallotDTO> individualSpeechBallots, Integer speakerPosition) {
         this.speakerId = speakerId;
         this.reply = reply;
         this.individualSpeechBallots = individualSpeechBallots;
+        this.speakerPosition = speakerPosition;
     }
 
     @Override
@@ -27,6 +29,7 @@ public class SpeechDTO {
                 "speakerId='" + speakerId + '\'' +
                 ", reply=" + reply +
                 ", ballots=" + individualSpeechBallots +
+                ", speakerPosition=" + speakerPosition +
                 '}';
     }
 
