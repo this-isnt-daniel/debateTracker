@@ -26,24 +26,24 @@ public class DebateService {
         return debateRepository.save(debate);
     }
 
-    /*
+    /**
     Find all the prelims where a debater spoke
-     */
+     **/
     public List<Debate> findPrelimsByDebaterId(Long debaterId) {
         return debateRepository.findPrelimsByDebaterId(debaterId);
     }
 
-    /*
+    /**
     Find all the break rounds where a debater was in a team that debated
-     */
+     **/
     public List<Debate> findBreaksByDebaterId(Long debaterId) {
         return debateRepository.findBreaksByDebaterId(debaterId);
     }
 
-    /*
+    /**
     Find all the debaters in a debate and returns them in two teams
     Excludes the debaters who didn't speak in the debate if it's a preliminary round
-     */
+     **/
     public List<Team> findDebatersSpeakingInDebate(Debate debate) {
         List<Team> teams = new ArrayList<>();
 
@@ -85,9 +85,9 @@ public class DebateService {
         return teams;
     }
 
-    /*
+    /**
     Calculate Head-to-Head score between all debaters
-     */
+     **/
     public Map<Debater, Map<Debater, Integer>> calculateHeadToHeadScore() {
         Map<Debater, Map<Debater, Integer>> headToHead = new HashMap<>();
         List<Debate> debates = debateRepository.findAll();
