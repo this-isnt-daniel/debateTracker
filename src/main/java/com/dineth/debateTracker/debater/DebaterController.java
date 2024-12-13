@@ -3,6 +3,7 @@ package com.dineth.debateTracker.debater;
 import com.dineth.debateTracker.ballot.Ballot;
 import com.dineth.debateTracker.ballot.BallotService;
 import com.dineth.debateTracker.debate.DebateService;
+import com.dineth.debateTracker.dtos.DebaterTournamentScoreDTO;
 import com.dineth.debateTracker.dtos.WinLossStatDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController @Slf4j
+@RestController
+@Slf4j
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/debater")
 public class DebaterController {
@@ -35,6 +37,7 @@ public class DebaterController {
 
     /**
      * Get debaters with the same name
+     *
      * @param birthdate - if true, also check for same birthdate
      * @return List of debaters with the same name
      */
@@ -48,6 +51,7 @@ public class DebaterController {
 
     /**
      * Replace one debater with another in all references in the database
+     *
      * @param values - oldDebaterId, newDebaterId
      */
     @PostMapping(path = "replace")
@@ -76,6 +80,17 @@ public class DebaterController {
             speaks.add(ballot.getSpeakerScore());
         }
         return speaks;
+    }
+
+    /**
+     * Returns a list of all tournaments and the scores & speaker position for each prelim for a debater
+     * @param debaterId - the id of the debater
+     */
+
+    @GetMapping(path = "speaks/v2/{debaterId}")
+    public DebaterTournamentScoreDTO getSpeaks(@PathVariable("debaterId") Long debaterId,
+                                               @RequestParam(value = "reply", required = false, defaultValue = "false") Boolean reply) {
+        return debaterService.getTournamentsAndScoresForSpeaker(debaterId, reply);
     }
 
     @GetMapping(path = "stats")

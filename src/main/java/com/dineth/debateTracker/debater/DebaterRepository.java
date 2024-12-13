@@ -2,6 +2,7 @@ package com.dineth.debateTracker.debater;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
@@ -20,4 +21,14 @@ public interface DebaterRepository extends JpaRepository<Debater, Long> {
     List<Object[]> findDebaterNameAndBirthdayDuplicates();
 
     List<Debater> findByFirstNameAndLastNameAllIgnoreCase(String firstName, String lastName);
+
+    @Query(value = "SELECT t.id as tid, t.shortName, r.id as rid, r.roundName, b.speakerScore, b.speakerPosition " +
+            "FROM Tournament t " +
+            "JOIN t.rounds r " +
+            "JOIN r.debates d " +
+            "JOIN d.ballots b " +
+            "WHERE b.debater.id = :debaterID " +
+            "ORDER BY t.shortName, r.roundName")
+    List<Object> findTournamentsAndScoresForSpeaker(@Param("debaterID") Long debaterID);
+
 }

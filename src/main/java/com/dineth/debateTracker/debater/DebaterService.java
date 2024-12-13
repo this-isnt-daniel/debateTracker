@@ -1,12 +1,16 @@
 package com.dineth.debateTracker.debater;
 
 import com.dineth.debateTracker.ballot.BallotService;
+import com.dineth.debateTracker.dtos.DebaterTournamentScoreDTO;
+import com.dineth.debateTracker.dtos.RoundScoreDTO;
+import com.dineth.debateTracker.dtos.TournamentRoundDTO;
 import com.dineth.debateTracker.team.TeamService;
 import com.dineth.debateTracker.utils.CustomExceptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -84,5 +88,40 @@ public class DebaterService {
         ballotService.replaceDebater(oldDebater, newDebater);
         teamService.replaceDebater(oldDebater, newDebater);
         debaterRepository.delete(oldDebater);
+    }
+
+    /**
+     * get all speaks for a debater from each tournament
+     */
+    public DebaterTournamentScoreDTO getTournamentsAndScoresForSpeaker(Long debaterID, Boolean reply) {
+//        Get the result set from the db
+        List<Object> temp = debaterRepository.findTournamentsAndScoresForSpeaker(debaterID);
+        Debater debater = findDebaterById(debaterID);
+        DebaterTournamentScoreDTO x = new DebaterTournamentScoreDTO(debater.getFirstName(), debater.getLastName(), debater.getId(), null);
+
+        HashMap<Long, TournamentRoundDTO> tournamentMap = new HashMap<>();
+
+//        iterate through the result set and separate the data tournament wise
+        for (Object o : temp) {
+            Object[] obj = (Object[]) o;
+            Long tid = (Long) obj[0];
+            if (!tournamentMap.containsKey(tid)) {
+                TournamentRoundDTO tr = new TournamentRoundDTO((String) obj[1], tid, null);
+                tournamentMap.put(tid, tr);
+            }
+        }
+//        iterate through the result set and separate the data round wise
+        for (Object o : temp) {
+            Object[] obj = (Object[]) o;
+            Long tid = (Long) obj[0];
+            TournamentRoundDTO tr = tournamentMap.get(tid);
+            RoundScoreDTO rs = new RoundScoreDTO((String) obj[3], (Long) obj[2], ((Float) obj[4]).doubleValue(), (Integer) obj[5]);
+//            skip reply rounds if required
+            if (!reply && rs.getSpeakerPosition() == 4) continue;
+            tr.addRoundScore(rs);
+            tournamentMap.put(tid, tr);
+        }
+        x.setTournamentRoundScores(new ArrayList<>(tournamentMap.values()));
+        return x;
     }
 }
