@@ -1,6 +1,6 @@
 package com.dineth.debateTracker.utils;
 
-import com.dineth.debateTracker.dtos.*;
+import com.dineth.debateTracker.dtos.xmlparsing.*;
 import lombok.extern.slf4j.Slf4j;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;

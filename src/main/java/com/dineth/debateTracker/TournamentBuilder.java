@@ -8,7 +8,7 @@ import com.dineth.debateTracker.debate.Debate;
 import com.dineth.debateTracker.debate.DebateService;
 import com.dineth.debateTracker.debater.Debater;
 import com.dineth.debateTracker.debater.DebaterService;
-import com.dineth.debateTracker.dtos.*;
+import com.dineth.debateTracker.dtos.xmlparsing.*;
 import com.dineth.debateTracker.eliminationballot.EliminationBallot;
 import com.dineth.debateTracker.eliminationballot.EliminationBallotService;
 import com.dineth.debateTracker.feedback.Feedback;
