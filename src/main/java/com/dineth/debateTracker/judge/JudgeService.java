@@ -38,7 +38,7 @@ public class JudgeService {
     /**
      * get all the tournaments judged by a given judge
      */
-    public List<String> getJudgesByTournament(Long judgeID) {
+    public List<String> getTournamentsJudged(Long judgeID) {
         JudgeTournamentScoreDTO breaks = this.getTournamentsAndBreaksJudged(judgeID);
         JudgeTournamentScoreDTO prelims = this.getTournamentsAndScoresForJudge(judgeID, false);
 
