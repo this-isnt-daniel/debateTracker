@@ -1,6 +1,5 @@
 package com.dineth.debateTracker.judge;
 
-import com.dineth.debateTracker.dtos.JudgeTournamentDTO;
 import com.dineth.debateTracker.dtos.JudgeTournamentScoreDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,20 +25,16 @@ public class JudgeController {
     }
 
     /**
-     * Get all judges and the rounds they've judged in each tournament
+     * For a judge get the tournaments they've judged at
      */
-    @GetMapping(path = "tournament-rounds")
-    public List<JudgeTournamentDTO> getJudgesByTournamentWithRounds() {
-        return judgeService.getJudgesByTournamentWithRounds();
+    @GetMapping(path = "tournaments/{id}")
+    public List<String> getTournamentsJudged(@PathVariable Long id) {
+        return judgeService.getJudgesByTournament(id);
     }
 
     /**
-     * Get all judges and the tournaments they've judged at
+     * Get the number of rounds judged by a judge {prelims, breaks}
      */
-    @GetMapping(path = "tournaments")
-    public List<JudgeTournamentDTO> getJudgesByTournament() {
-        return judgeService.getJudgesByTournament();
-    }
     @GetMapping(path = "rounds/count/{id}")
     public HashMap<String, Integer> getRoundsJudged(@PathVariable Long id) {
         return judgeService.getRoundsJudged(id);

@@ -1,13 +1,15 @@
 package com.dineth.debateTracker.judge;
 
-import com.dineth.debateTracker.dtos.JudgeTournamentDTO;
 import com.dineth.debateTracker.dtos.JudgeTournamentScoreDTO;
 import com.dineth.debateTracker.dtos.RoundScoreDTO;
 import com.dineth.debateTracker.dtos.TournamentRoundDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 
 @Service
 public class JudgeService {
@@ -33,87 +35,23 @@ public class JudgeService {
         return judgeRepository.findByFnameAndLname(judge.getFname(), judge.getLname());
     }
 
-    public List<JudgeTournamentDTO> getJudgesByTournamentWithRounds() {
-        List<Object[]> tempPrelims = judgeRepository.getJudgesByTournamentWithPrelims();
-        List<Object[]> tempBreaks = judgeRepository.getJudgesByTournamentWithBreaks();
+    /**
+     * get all the tournaments judged by a given judge
+     */
+    public List<String> getJudgesByTournament(Long judgeID) {
+        JudgeTournamentScoreDTO breaks = this.getTournamentsAndBreaksJudged(judgeID);
+        JudgeTournamentScoreDTO prelims = this.getTournamentsAndScoresForJudge(judgeID, false);
 
-        HashMap<String, JudgeTournamentDTO> map = new HashMap<>();
-
-        // Process prelim rounds
-        for (Object[] obj : tempPrelims) {
-            String firstName = (String) obj[0];
-            String lastName = (String) obj[1];
-            String[] roundArray = (String[]) obj[2];
-            List<String> rounds = new ArrayList<>(Arrays.asList(roundArray));
-            String tournamentShortName = (String) obj[3];
-            Long judgeId = (Long) obj[4];
-
-            String key = judgeId + " " + tournamentShortName;
-            JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", rounds, tournamentShortName);
-            map.put(key, judgeTournamentDTO);
+        HashSet<String> set = new HashSet<>();
+        for (TournamentRoundDTO tr : breaks.getTournamentRoundScores()) {
+            set.add(tr.getTournamentShortName());
         }
-
-        // Process break rounds
-        for (Object[] obj : tempBreaks) {
-            String firstName = (String) obj[0];
-            String lastName = (String) obj[1];
-            String[] roundArray = (String[]) obj[2];
-            List<String> rounds = Arrays.asList(roundArray);
-            String tournamentShortName = (String) obj[3];
-            Long judgeId = (Long) obj[4];
-
-            String key = judgeId + " " + tournamentShortName;
-            JudgeTournamentDTO judgeTournamentDTO = map.get(key);
-
-            if (judgeTournamentDTO != null) {
-                judgeTournamentDTO.getRounds().addAll(rounds);  // Merge rounds if exists
-            } else {
-                judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", rounds, tournamentShortName);
-                map.put(key, judgeTournamentDTO);  // Add to map if new
-            }
+        for (TournamentRoundDTO tr : prelims.getTournamentRoundScores()) {
+            set.add(tr.getTournamentShortName());
         }
+        return new ArrayList<>(set);
 
-        return new ArrayList<>(map.values());
-    }
 
-    public List<JudgeTournamentDTO> getJudgesByTournament() {
-        List<Object[]> tempPrelims = judgeRepository.getJudgesByTournamentPrelims();
-        List<Object[]> tempBreaks = judgeRepository.getJudgesByTournamentBreaks();
-
-        HashMap<Long, JudgeTournamentDTO> map = new HashMap<>();
-
-        // Process prelim rounds
-        for (Object[] obj : tempPrelims) {
-            String firstName = (String) obj[0];
-            String lastName = (String) obj[1];
-            String[] tournamentArray = (String[]) obj[2];  // Cast to String[]
-            List<String> tournaments = Arrays.asList(tournamentArray);  // Convert to List<String>
-            Long judgeId = (Long) obj[3];
-
-            JudgeTournamentDTO judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", tournaments, "");
-            map.put(judgeId, judgeTournamentDTO);
-        }
-        // Process break rounds
-        for (Object[] obj : tempBreaks) {
-            String firstName = (String) obj[0];
-            String lastName = (String) obj[1];
-            String[] tournamentArray = (String[]) obj[2];  // Cast to String[]
-            List<String> tournaments = Arrays.asList(tournamentArray);  // Convert to List<String>
-            Long judgeId = (Long) obj[3];
-
-            JudgeTournamentDTO judgeTournamentDTO = map.get(judgeId);
-            if (judgeTournamentDTO != null) {
-                //merge tournaments if exists and get distinct values
-                Set<String> set = new HashSet<>(judgeTournamentDTO.getRounds());
-                set.addAll(tournaments);
-                judgeTournamentDTO.setRounds(new ArrayList<>(set));
-                map.put(judgeId, judgeTournamentDTO);  // Add to map if exists
-            } else {
-                judgeTournamentDTO = new JudgeTournamentDTO(judgeId,firstName, lastName, "", tournaments, "");
-                map.put(judgeId, judgeTournamentDTO);  // Add to map if new
-            }
-        }
-        return new ArrayList<>(map.values());
     }
 
     /**
