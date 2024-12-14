@@ -29,9 +29,7 @@ public class TournamentRoundDTO {
     }
 
     public Integer getNumberOfRounds() {
-        return (int) roundScores.stream()
-                .filter(roundScore -> roundScore.getSpeakerPosition() != 4)
-                .count();
+        return (int) roundScores.stream().map(RoundScoreDTO::getRoundId).distinct().count();
     }
 
 
