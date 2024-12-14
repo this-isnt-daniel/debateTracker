@@ -28,7 +28,7 @@ public class TeamService {
         return teamRepository.findById(id).orElse(null);
     }
 
-    private List<Team> getTeamsByDebater(Long debaterId) {
+    public List<Team> getTeamsByDebater(Long debaterId) {
         return teamRepository.findByDebaters_Id(debaterId);
     }
 
