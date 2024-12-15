@@ -154,8 +154,9 @@ public class TournamentBuilder {
             try {
                 for (InstitutionDTO institutionDTO : institutionDTOs) {
                     //  check if institution exists
-                    Institution tempInstitution = institutionService.findInstitutionByName(institutionDTO.name.strip());
-                    if (tempInstitution == null) {
+                   // Institution tempInstitution = institutionService.findInstitutionByName(institutionDTO.name.strip());
+                   Institution tempInstitution = null;
+                   if (tempInstitution == null) {
                         log.debug("Adding institution : " + institutionDTO.name);
                         Institution institution = new Institution(institutionDTO.name.strip(), institutionDTO.reference);
                         institution = institutionService.addInstitution(institution);

@@ -27,10 +27,10 @@ public class InstitutionController {
      * @param name - name of the institution
      * @return List of institutions with similar names
      */
-    @GetMapping(path = "similar")
-    public List<String> getInstitutionsWithSimilarNames(@RequestParam String name) {
-        return institutionService.getInstitutionsWithSimilarNames(name);
-    }
+    // @GetMapping(path = "similar")
+    // public List<String> getInstitutionsWithSimilarNames(@RequestParam String name) {
+    //     return institutionService.getInstitutionsWithSimilarNames(name);
+    // }
 
     /**
      * Merge a list of institutions in all references in the database

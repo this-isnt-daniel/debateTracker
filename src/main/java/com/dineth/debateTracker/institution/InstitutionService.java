@@ -19,19 +19,19 @@ public class InstitutionService {
     public List<Institution> getInstitutions() {
         return institutionRepository.findAll();
     }
-    public Institution findInstitutionByName(String name) {
-//        turn to lowercase, strip spaces and special characters
-        List<String> similarNames = getInstitutionsWithSimilarNames(name);
-        name = name.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
-        for (String s : similarNames) {
-            String[] parts = s.split(",");
-            String temp = parts[1].toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
-            if (temp.equals(name)) {
-                return institutionRepository.findById(Long.parseLong(parts[0])).orElse(null);
-            }
-        }
-        return null;
-    }
+//     public Institution findInstitutionByName(String name) {
+// //        turn to lowercase, strip spaces and special characters
+//         List<String> similarNames = getInstitutionsWithSimilarNames(name);
+//         name = name.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+//         for (String s : similarNames) {
+//             String[] parts = s.split(",");
+//             String temp = parts[1].toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+//             if (temp.equals(name)) {
+//                 return institutionRepository.findById(Long.parseLong(parts[0])).orElse(null);
+//             }
+//         }
+//         return null;
+//     }
 
     public Institution findInstitutionById(Long id) {
         return institutionRepository.findById(id).orElse(null);
@@ -72,15 +72,15 @@ public class InstitutionService {
         return institutionRepository.save(mergedInstitution);
     }
 
-    public List<String> getInstitutionsWithSimilarNames(String name) {
-        List<String> l1 = institutionRepository.findSimilarInstitutions(name);
-        List<Institution> l2 = institutionRepository.findByNameContaining(name);
-        for (Institution i : l2) {
-            String temp =  i.getId() + "," + i.getName();
-            if (!l1.contains(temp)) {
-                l1.add(temp);
-            }
-        }
-        return l1;
-    }
+    // public List<String> getInstitutionsWithSimilarNames(String name) {
+    //     List<String> l1 = institutionRepository.findSimilarInstitutions(name);
+    //     List<Institution> l2 = institutionRepository.findByNameContaining(name);
+    //     for (Institution i : l2) {
+    //         String temp =  i.getId() + "," + i.getName();
+    //         if (!l1.contains(temp)) {
+    //             l1.add(temp);
+    //         }
+    //     }
+    //     return l1;
+    // }
 }
