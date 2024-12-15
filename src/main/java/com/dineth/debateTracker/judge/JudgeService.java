@@ -4,6 +4,7 @@ import com.dineth.debateTracker.dtos.JudgeStatsDTO;
 import com.dineth.debateTracker.dtos.JudgeTournamentScoreDTO;
 import com.dineth.debateTracker.dtos.RoundScoreDTO;
 import com.dineth.debateTracker.dtos.TournamentRoundDTO;
+import com.dineth.debateTracker.tournament.TournamentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +16,12 @@ import java.util.List;
 @Service
 public class JudgeService {
     private final JudgeRepository judgeRepository;
+    private final TournamentRepository tournamentRepository;
 
     @Autowired
-    public JudgeService(JudgeRepository judgeRepository) {
+    public JudgeService(JudgeRepository judgeRepository, TournamentRepository tournamentRepository) {
         this.judgeRepository = judgeRepository;
+        this.tournamentRepository = tournamentRepository;
     }
 
     public List<Judge> getJudges() {
@@ -83,6 +86,7 @@ public class JudgeService {
             Long tid = (Long) obj[0];
             if (!tournamentMap.containsKey(tid)) {
                 TournamentRoundDTO tr = new TournamentRoundDTO((String) obj[1], tid, null);
+                tr.setDate(tournamentRepository.findById(tid).get().getDate());
                 tournamentMap.put(tid, tr);
             }
         }
@@ -117,6 +121,7 @@ public class JudgeService {
             Long tid = (Long) obj[0];
             if (!tournamentMap.containsKey(tid)) {
                 TournamentRoundDTO tr = new TournamentRoundDTO((String) obj[1], tid, null);
+                tr.setDate(tournamentRepository.findById(tid).get().getDate());
                 tournamentMap.put(tid, tr);
             }
         }

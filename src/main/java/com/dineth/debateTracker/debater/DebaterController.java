@@ -31,6 +31,11 @@ public class DebaterController {
         return debaterService.getDebaters();
     }
 
+    @GetMapping(path = "{debaterId}")
+    public Debater getDebater(@PathVariable("debaterId") Long debaterId) {
+        return debaterService.findDebaterById(debaterId);
+    }
+
     /**
      * Get debaters with the same name
      *

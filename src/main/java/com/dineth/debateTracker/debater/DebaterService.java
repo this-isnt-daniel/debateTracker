@@ -5,6 +5,7 @@ import com.dineth.debateTracker.dtos.DebaterTournamentScoreDTO;
 import com.dineth.debateTracker.dtos.RoundScoreDTO;
 import com.dineth.debateTracker.dtos.TournamentRoundDTO;
 import com.dineth.debateTracker.team.TeamService;
+import com.dineth.debateTracker.tournament.TournamentRepository;
 import com.dineth.debateTracker.utils.CustomExceptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,12 +17,14 @@ import java.util.List;
 @Service
 public class DebaterService {
     private final DebaterRepository debaterRepository;
+    private final TournamentRepository tournamentRepository;
     private final BallotService ballotService;
     private final TeamService teamService;
 
     @Autowired
-    public DebaterService(DebaterRepository debaterRepository, BallotService ballotService, TeamService teamService) {
+    public DebaterService(DebaterRepository debaterRepository, TournamentRepository tournamentRepository, BallotService ballotService, TeamService teamService) {
         this.debaterRepository = debaterRepository;
+        this.tournamentRepository = tournamentRepository;
         this.ballotService = ballotService;
         this.teamService = teamService;
     }
@@ -107,6 +110,9 @@ public class DebaterService {
             Long tid = (Long) obj[0];
             if (!tournamentMap.containsKey(tid)) {
                 TournamentRoundDTO tr = new TournamentRoundDTO((String) obj[1], tid, null);
+//                find date of the tournament
+                tr.setDate(tournamentRepository.findById(tid).get().getDate());
+
                 tournamentMap.put(tid, tr);
             }
         }
