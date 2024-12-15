@@ -1,5 +1,6 @@
 package com.dineth.debateTracker.judge;
 
+import com.dineth.debateTracker.dtos.JudgeStatsDTO;
 import com.dineth.debateTracker.dtos.JudgeTournamentScoreDTO;
 import com.dineth.debateTracker.dtos.RoundScoreDTO;
 import com.dineth.debateTracker.dtos.TournamentRoundDTO;
@@ -27,6 +28,7 @@ public class JudgeService {
     public Judge findJudgeById(Long id) {
         return judgeRepository.findById(id).orElse(null);
     }
+
     public Judge addJudge(Judge judge) {
         return judgeRepository.save(judge);
     }
@@ -57,7 +59,7 @@ public class JudgeService {
     /**
      * get the number of rounds judged by a judge
      */
-    public HashMap<String,Integer> getRoundsJudged(Long judgeID) {
+    public HashMap<String, Integer> getRoundsJudged(Long judgeID) {
         JudgeTournamentScoreDTO breaks = this.getTournamentsAndBreaksJudged(judgeID);
         JudgeTournamentScoreDTO prelims = this.getTournamentsAndScoresForJudge(judgeID, false);
         return new HashMap<>() {{
@@ -69,7 +71,7 @@ public class JudgeService {
     /**
      * get all speaks given by a judge at each tournament
      */
-    public JudgeTournamentScoreDTO getTournamentsAndScoresForJudge(Long judgeID,Boolean reply) {
+    public JudgeTournamentScoreDTO getTournamentsAndScoresForJudge(Long judgeID, Boolean reply) {
         List<Object> temp = judgeRepository.findTournamentsAndScoresForJudge(judgeID);
         Judge judge = findJudgeById(judgeID);
         JudgeTournamentScoreDTO x = new JudgeTournamentScoreDTO(judge.getFname(), judge.getLname(), judge.getId(), null);
@@ -129,5 +131,44 @@ public class JudgeService {
         }
         x.setTournamentRoundScores(new ArrayList<>(tournamentMap.values()));
         return x;
+    }
+
+    /**
+     * Get stats for a given judge for the master tab
+     *
+     * @param judgeID the id of the judge
+     */
+    public JudgeStatsDTO getJudgeStats(Long judgeID) {
+        JudgeTournamentScoreDTO breaks = this.getTournamentsAndBreaksJudged(judgeID);
+        JudgeTournamentScoreDTO prelims = this.getTournamentsAndScoresForJudge(judgeID, false);
+        Judge judge = findJudgeById(judgeID);
+        List<Double> replyScoresGiven = new ArrayList<>();
+        List<Double> substantiveScoresGiven = prelims.getTournamentRoundScores().stream().map(TournamentRoundDTO::getRoundScores).flatMap(List::stream).filter(a -> a.getSpeakerPosition() != 4).map(RoundScoreDTO::getScore).toList();
+        List<RoundScoreDTO> allScores = prelims.getTournamentRoundScores().stream().map(TournamentRoundDTO::getRoundScores).flatMap(List::stream).toList();
+
+
+        HashSet<String> tournamentsJudged = new HashSet<>();
+        for (TournamentRoundDTO tr : breaks.getTournamentRoundScores()) {
+            tournamentsJudged.add(tr.getTournamentShortName());
+        }
+        for (TournamentRoundDTO tr : prelims.getTournamentRoundScores()) {
+            tournamentsJudged.add(tr.getTournamentShortName());
+        }
+        Double averageFirst = allScores.stream().filter(a -> a.getSpeakerPosition() == 1).mapToDouble(RoundScoreDTO::getScore).average().orElse(0.0);
+        Double averageSecond = allScores.stream().filter(a -> a.getSpeakerPosition() == 2).mapToDouble(RoundScoreDTO::getScore).average().orElse(0.0);
+        Double averageThird = allScores.stream().filter(a -> a.getSpeakerPosition() == 3).mapToDouble(RoundScoreDTO::getScore).average().orElse(0.0);
+        Double averageReply = allScores.stream().filter(a -> a.getSpeakerPosition() == 4).mapToDouble(RoundScoreDTO::getScore).average().orElse(0.0);
+
+        Double averageSubstantive = substantiveScoresGiven.stream().mapToDouble(a -> a).average().orElse(0.0);
+
+        int breaksJudged = breaks.getTotalDebatesJudged();
+        int prelimsJudged = prelims.getTotalDebatesJudged();
+        Double stDeviation = Math.sqrt(substantiveScoresGiven.stream().mapToDouble(a -> Math.pow(a - averageSubstantive, 2)).sum() / substantiveScoresGiven.size());
+
+        return new JudgeStatsDTO(judge, breaksJudged + prelimsJudged, breaksJudged,
+                prelimsJudged, averageFirst, averageSecond, averageThird, averageReply, averageSubstantive,
+                stDeviation, new ArrayList<>(tournamentsJudged), substantiveScoresGiven, replyScoresGiven);
+
+
     }
 }

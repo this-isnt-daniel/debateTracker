@@ -1,10 +1,12 @@
 package com.dineth.debateTracker.judge;
 
+import com.dineth.debateTracker.dtos.JudgeStatsDTO;
 import com.dineth.debateTracker.dtos.JudgeTournamentScoreDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -91,11 +93,11 @@ public class JudgeController {
      * For all judges get the tournaments they've judged prelims at along with scores given
      */
     @GetMapping(path = "rounds/prelims/all")
-    public HashMap<Judge, JudgeTournamentScoreDTO> getPrelimScoresByJudge() {
+    public List<JudgeTournamentScoreDTO> getPrelimScoresByJudge() {
         List<Judge> allJudges = judgeService.getJudges();
-        HashMap<Judge, JudgeTournamentScoreDTO> judgeScores = new HashMap<>();
+        List<JudgeTournamentScoreDTO> judgeScores = new ArrayList<>();
         for (Judge judge : allJudges) {
-            judgeScores.put(judge, judgeService.getTournamentsAndScoresForJudge(judge.getId(),false));
+            judgeScores.add(judgeService.getTournamentsAndScoresForJudge(judge.getId(), false));
         }
         return judgeScores;
     }
@@ -104,13 +106,36 @@ public class JudgeController {
      * For all judges get the tournaments they've judged break rounds at
      */
     @GetMapping(path = "rounds/breaks/all")
-    public HashMap<Judge, JudgeTournamentScoreDTO> getBreakScoresByJudge() {
+    public List<JudgeTournamentScoreDTO> getBreakScoresByJudge() {
         List<Judge> allJudges = judgeService.getJudges();
-        HashMap<Judge, JudgeTournamentScoreDTO> judgeScores = new HashMap<>();
+        List<JudgeTournamentScoreDTO> judgeScores = new ArrayList<>();
         for (Judge judge : allJudges) {
-            judgeScores.put(judge, judgeService.getTournamentsAndBreaksJudged(judge.getId()));
+            judgeScores.add(judgeService.getTournamentsAndBreaksJudged(judge.getId()));
         }
         return judgeScores;
     }
+
+    /**
+     * Get statistics for a judge
+     */
+    @GetMapping(path = "stats")
+    public JudgeStatsDTO getJudgeStats(@RequestParam Long id) {
+        return judgeService.getJudgeStats(id);
+    }
+
+    /**
+     * Get statistics for all judges
+     */
+    @GetMapping(path = "stats/all")
+    public List<JudgeStatsDTO> getJudgeStats() {
+        List<Judge> allJudges = judgeService.getJudges();
+        List<JudgeStatsDTO> judgeStats = new ArrayList<>();
+        for (Judge judge : allJudges) {
+            judgeStats.add(judgeService.getJudgeStats(judge.getId()));
+        }
+        return judgeStats;
+    }
+
+
 
 }
