@@ -2705,7 +2705,7 @@
         <team name="Musaeus College B" code="Bird" id="T19" break-eligibilities="BC1">
             <speaker id="S71" institutions="I3" categories="">Anulya Wariyapola</speaker>
             <speaker id="S72" institutions="I3" categories="">Siddha Rajapaksha</speaker>
-            <speaker id="S73" institutions="I3" categories="">Dinethmi Gunewardena</speaker>
+            <speaker id="S73" institutions="I3" categories="">Dinethmi Gunawardena</speaker>
             <speaker id="S74" institutions="I3" categories="">Aanya De Silva</speaker>
         </team>
         <team name="Royal College Blue" code="True Neutral" id="T20" break-eligibilities="BC1">
@@ -2784,7 +2784,7 @@
         <adjudicator id="A126" name="Mauli Kularatne" core="false" independent="false" score="2.5"/>
         <adjudicator id="A127" name="Kamalanathan Bavathmicka" core="false" independent="false" score="2.5"/>
         <adjudicator id="A128" name="Anuja Muthumala" core="false" independent="false" score="2.5"/>
-        <adjudicator id="A129" name="Lee Yong" core="false" independent="false" score="2.5"/>
+        <adjudicator id="A129" name="Lee Yong Wai" core="false" independent="false" score="2.5"/>
         <adjudicator id="A130" name="Sanchitha Wickrama" core="false" independent="false" score="2.5"/>
         <adjudicator id="A131" name="Chirathi Perera" core="false" independent="false" score="2.5"/>
         <adjudicator id="A132" name="Shavindri Pieris" core="false" independent="false" score="2.5"/>
