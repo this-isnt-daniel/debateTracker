@@ -1,7 +1,5 @@
 package com.dineth.debateTracker.debater;
 
-import com.dineth.debateTracker.ballot.Ballot;
-import com.dineth.debateTracker.ballot.BallotService;
 import com.dineth.debateTracker.debate.DebateService;
 import com.dineth.debateTracker.dtos.DebaterTournamentScoreDTO;
 import com.dineth.debateTracker.dtos.WinLossStatDTO;
@@ -20,13 +18,11 @@ import java.util.Map;
 @RequestMapping(path = "api/v1/debater")
 public class DebaterController {
     private final DebaterService debaterService;
-    private final BallotService ballotService;
     private final DebateService debateService;
 
     @Autowired
-    public DebaterController(DebaterService debaterService, BallotService ballotService, DebateService debateService) {
+    public DebaterController(DebaterService debaterService, DebateService debateService) {
         this.debaterService = debaterService;
-        this.ballotService = ballotService;
         this.debateService = debateService;
     }
 
@@ -72,25 +68,27 @@ public class DebaterController {
         return debaterService.addDebater(debater);
     }
 
-    @GetMapping(path = "speaks/{debaterId}")
-    public List<Float> getAllSpeaks(@PathVariable("debaterId") Long debaterId) {
-        List<Ballot> ballots = ballotService.findBallotsByDebaterAndIsSubstantive(new Debater(debaterId));
-        List<Float> speaks = new ArrayList<>();
-        for (Ballot ballot : ballots) {
-            speaks.add(ballot.getSpeakerScore());
-        }
-        return speaks;
-    }
-
     /**
      * Returns a list of all tournaments and the scores & speaker position for each prelim for a debater
      * @param debaterId - the id of the debater
      */
-
-    @GetMapping(path = "speaks/v2/{debaterId}")
+    @GetMapping(path = "speaks/{debaterId}")
     public DebaterTournamentScoreDTO getSpeaks(@PathVariable("debaterId") Long debaterId,
                                                @RequestParam(value = "reply", required = false, defaultValue = "false") Boolean reply) {
         return debaterService.getTournamentsAndScoresForSpeaker(debaterId, reply);
+    }
+
+    /**
+     * Returns a list of all tournaments and the scores & speaker position for each prelim for all debaters
+     */
+    @GetMapping(path = "speaks/all")
+    public List<DebaterTournamentScoreDTO> getAllSpeaks() {
+        List<Debater> debaters = debaterService.getDebaters();
+        List<DebaterTournamentScoreDTO> debaterTournamentScoreDTOS = new ArrayList<>();
+        for (Debater debater : debaters) {
+            debaterTournamentScoreDTOS.add(debaterService.getTournamentsAndScoresForSpeaker(debater.getId(), false));
+        }
+        return debaterTournamentScoreDTOS;
     }
 
     @GetMapping(path = "stats")
